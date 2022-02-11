@@ -1,0 +1,5 @@
+10/02/2022 - set up my workspace, start heroku Deployment.
+
+11/02/2022 - Creat User Stories and automate them to a project. Creat Schedule text file. 
+
+12/02/2022 - start on my home page of the website 

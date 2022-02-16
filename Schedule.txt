@@ -3,3 +3,8 @@
 11/02/2022 - Creat User Stories and automate them to a project. Creat Schedule text file. 
 
 12/02/2022 - start on my models
+
+16/02/2022 - set-up my index.html file path, make more templates, read over dejango documentation. talked with asendeep, got calendar from stack overflow.
+
+17/02/2022 - set-up all my templates and start with my index.html template.
+

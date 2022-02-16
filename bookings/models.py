@@ -5,5 +5,5 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Occupied"), (1, "Ordered"))
 
 class BookTable(models.Model):
-    people = models.IntegerField(max_length=5)
+    people = models.IntegerField()
     pick_date = models.DateField()

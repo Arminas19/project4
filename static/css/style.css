@@ -1,3 +1,6 @@
 .nav-link{
-    text-align: right;
+    font-size: 20px;
+}
+.nav-item{
+    padding-left: 20px;
 }

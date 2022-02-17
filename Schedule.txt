@@ -8,3 +8,5 @@
 
 17/02/2022 - set-up all my templates and start with my index.html template.
 
+18/02/2022 - created a header and background for my base.html file.
+

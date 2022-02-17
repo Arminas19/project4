@@ -2,5 +2,5 @@ from django.shortcuts import render, HttpResponse
 from django.views import generic
 
 def index(request):
-    return HttpResponse("")
+    return render(request, 'index.html', context=None)
 

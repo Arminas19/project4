@@ -1,6 +1,13 @@
-.nav-link{
+.nav-item-header{
     font-size: 20px;
 }
-.nav-item{
+.nav-item-header{
     padding-left: 20px;
+}
+#resturanunt-image{
+width:90%;
+}
+
+footer{
+    padding: 0;
 }

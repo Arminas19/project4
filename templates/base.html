@@ -15,56 +15,102 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-0 h1" href="#">Sodja Resturaunt 
-                    <img src="{% static 'assets/icon.png' %}" alt="" width="50" height="40">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link nav-link-header" aria-current="page" href="#">Login</a>
-                        </li>
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link nav-item-header" href="#">Register</a>
-                        </li>
-                        <li class="nav-item nav-item-header">
-                            <a class="nav-link nav-item-header disabled" href="#">Book Tables</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid bg-dark bg-gradient">
-            <div id="resturanunt-image-container container-fluid">
-                <img src="{% static 'assets/edit3.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Resturaunt"
-                    id="resturanunt-image">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
+        <div class="container-fluid">
+            <a class="navbar-brand mb-0 h1" href="#">Sodja Resturaunt
+                <img src="{% static 'assets/icon.png' %}" alt="" width="50" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link nav-link-header" aria-current="page" href="#">Login</a>
+                    </li>
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link nav-item-header" href="#">Register</a>
+                    </li>
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link nav-item-header disabled" href="#">Book Tables</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
-    {% block content %}
-    {% endblock %}
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark mt-auto" id="footer">
-          <p class="col-md-4 mb-0 text-muted">&copy; 2022 Sodja Company Resturaunt, Inc</p>
-      
-          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    </nav>
+
+    <div class="container-fluid bg-dark bg-gradient">
+        <div id="resturanunt-image-container">
+            <img src="{% static 'assets/edit3.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Resturaunt"
+                id="resturanunt-image">
+        </div>
+        <hr>
+        <hr>
+    </div>
+
+    <div class="container-fluid" style="background-color: rgba(105, 2, 2, 0.589);">
+        <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(55, 57, 65);">
+            <div class="row" style="border: 1px solid #fff;">
+                <div class="col-12 pt-3">
+                    <h1 class="text-center display-2" style="color: #fff;"> About Us <img
+                            src="{% static 'assets/icon.png' %}" alt="" width="90" height="90"></h1>
+                </div>
+            </div>
+            <div class="row p-5 g-5">
+                <div class="col-sm-6">
+                    <div class="p-3">
+                        <h1 class="text-center" style="color: #fff;">Main content</h1>
+                        <p style="color: #fff;"> Use the responsive .row-cols-* classes to quickly set the number of
+                            columns that best render your
+                            content and layout. Whereas normal .col-* classes apply to the individual columns (e.g.,
+                            .col-md-4),
+                            the
+                            row columns classes are set on the parent .row as a shortcut. With .row-cols-auto you can
+                            give the
+                            columns their natural width.
+
+                            Use these row columns classes to quickly create basic grid layouts or to control your card
+                            layouts
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="p-3">
+                        <h1 class="text-center" style="color: #fff;">Secondary content</h1>
+                        <p style="color: #fff;"> Sass
+                            When using Bootstrap’s source Sass files, you have the option of using Sass variables and
+                            mixins to
+                            create custom, semantic, and responsive page layouts. Our predefined grid classes use these
+                            same
+                            variables and mixins to provide a whole suite of ready-to-use classes for fast responsive
+                            layouts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark mt-auto"
+        id="footer">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Sodja Company Resturaunt, Inc</p>
+
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
             <img src="{% static 'assets/icon.png' %}" alt="" width="65" height="65">
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Top</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Menu</a></li>
-          </ul>
-        </footer>
+        </ul>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-  </body>
+</body>
 
 </html>

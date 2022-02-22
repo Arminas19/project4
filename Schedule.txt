@@ -17,3 +17,5 @@
 21/02/2022 - finish about section
 
 22/02/2022 - start on menu section.
+
+23/02/2022 - tiddy up my website, link up links, leave comments on html code and css.

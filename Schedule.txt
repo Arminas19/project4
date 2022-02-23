@@ -19,3 +19,5 @@
 22/02/2022 - start on menu section.
 
 23/02/2022 - tiddy up my website, link up links, leave comments on html code and css.
+
+24/02/2022 - start on my register (Sign-up.html) webpage.

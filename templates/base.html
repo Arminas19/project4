@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<!-- This is my main nav bar  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="#">Sodja Resturaunt
@@ -27,10 +28,10 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
                     <li class="nav-item nav-item-header">
-                        <a class="nav-link nav-link-header" aria-current="page" href="#">Login</a>
+                        <a class="nav-link nav-link-header" aria-current="page" href="./login.html">Login</a>
                     </li>
                     <li class="nav-item nav-item-header">
-                        <a class="nav-link nav-item-header" href="#">Register</a>
+                        <a class="nav-link nav-item-header" href="./Sign-up.html">Register</a>
                     </li>
                     <li class="nav-item nav-item-header">
                         <a class="nav-link nav-item-header disabled" href="#">Book Tables</a>
@@ -39,7 +40,7 @@
             </div>
         </div>
     </nav>
-
+<!-- This is my image and container that is at the top of the page -->
     <div class="container-fluid bg-dark bg-gradient">
         <div id="resturanunt-image-container">
             <img src="{% static 'assets/edit3.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Resturaunt"
@@ -48,12 +49,13 @@
         <hr>
         <hr>
     </div>
-
+<!-- This is my container, Columns and rows (grid system) that i use for my about page -->
+<!-- About Section -->
     <div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.678);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(55, 57, 65);">
             <div class="row" style="border: 1px solid #fff;">
                 <div class="col-12 pt-3">
-                    <h1 class="text-center display-2" style="color: #fff;"> Something About Us <img
+                    <h1 class="text-center display-2" id="About-Us-id" style="color: #fff;"> Something About Us <img
                             src="{% static 'assets/icon.png' %}" alt="" width="90" height="90"></h1>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                             everywhere! You can book your parties / weddings and other such events with us using our
                             contact line + 353 0894787029 or you can email us at SodjaResturant@gmail.com, For more
                             information about travel and site's of
-                            Maynooth please come visit <a href="https://maynoothtown.ie/">https://maynoothtown.ie/</a>
+                            Maynooth please come visit <a href="https://maynoothtown.ie/" target="_blank">https://maynoothtown.ie/</a>
                             where you can find more excluseive information about our Town.
                         </p>
                     </div>
@@ -107,13 +109,15 @@
         <hr>
 
     </div>
+<!-- End of About Section -->
 
     <!-- Menu Section -->
+    <!-- I used a grid system for my menu section  -->
     <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(255, 255, 255);">
             <div class="row" style="border: 1px solid #fff;">
                 <div class="col-12 pt-3">
-                    <h1 class="text-center display-2" style="color: rgb(0, 0, 0);"> Menu <img
+                    <h1 class="text-center display-2" id="Menu-id" style="color: rgb(0, 0, 0);"> Menu <img
                             src="{% static 'assets/icon.png' %}" alt="" width="90" height="90"></h1>
                 </div>
             </div>
@@ -218,8 +222,8 @@
 
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Top</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Menu</a></li>
+            <li class="nav-item"><a href="#About-Us-id" class="nav-link px-2 text-muted">About</a></li>
+            <li class="nav-item"><a href="#Menu-id" class="nav-link px-2 text-muted">Menu</a></li>
         </ul>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

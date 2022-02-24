@@ -11,7 +11,7 @@
 <div class="container mt-5" style="border: 3px solid #212529; border-radius: 25px; background-color: rgba(0, 0, 0, 0.473);">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h2 style="color:  #d1d1d1;">{% trans "Sign In" %}</h2>
+            <h1 style="color:  #d1d1d1;">{% trans "Sign In" %}</h1>
 
             <p style="color: #d1d1d1; font-size: 18px;">{% blocktrans %}Welcome back to Sodja Restaurant. To Book a Table with us you will need 
               to sign-up to our website.
@@ -28,6 +28,7 @@
                 <input style="color:  #d1d1d1; font-size: 20px;" type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <button class="btn btn btn-dark btn-signup right" style="color: white;" type="submit">{% trans "Sign In" %}</button>
+                <hr style="Visibility: hidden;">
             </form>
         </div>
     </div>

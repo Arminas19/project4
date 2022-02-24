@@ -9,3 +9,9 @@ def login(request):
 
 def signUp(request):
     return render(request, 'Sign-up.html', context=None)
+
+def loggedin(request):
+    return render(request, 'logged-in.html', context=None)
+
+def bookTable(request):
+    return render(request, 'book-table.html', context=None)

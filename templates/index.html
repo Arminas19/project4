@@ -1,7 +1,177 @@
 {% extends "base.html" %}
-{% block content %}
+{% load static %}
+
+<!-- This is my image and container that is at the top of the page -->
+<div class="container-fluid bg-dark bg-gradient">
+    <div id="resturanunt-image-container">
+        <img src="{% static 'assets/edit3.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Resturaunt"
+            id="resturanunt-image">
+    </div>
+    <hr>
+    <hr>
+</div>
+<!-- This is my container, Columns and rows (grid system) that i use for my about page -->
+<!-- About Section -->
+<div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.678);">
+    <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(55, 57, 65);">
+        <div class="row" style="border: 1px solid #fff;">
+            <div class="col-12 pt-3">
+                <h1 class="text-center display-2" id="About-Us-id" style="color: #fff;"> Something About Us <img
+                        src="{% static 'assets/icon.png' %}" alt="" width="90" height="90"></h1>
+            </div>
+        </div>
+        <div class="row p-5 g-5">
+            <div class="col-sm-6">
+                <div class="p-3">
+                    <h1 class="text-center" style="color: #fff;">Sodja Resturaunt</h1>
+                    <p style="color: #fff;"> We promise a
+                        romantic setting for you and your guessed to dine in. We offer a
+                        special menu that was selected by our head chef that should complement your romantic
+                        environment.
+                        We have Comtrouble chairs with
+                        nicely dressed tables and a bar in our
+                        restaurant. We also have a decorated lounge area
+                        if for any reason you had to wait for your tables to get pre-pared.
+                        Also something interesting about our bar - our bar got nominated for Best restaurant Bar of
+                        the Year 2022.
+                        At Arkle Bar, each
+                        and every dish is freshly prepared and cooked and is a dedication to our promise to use only
+                        the best quality ingredients.
+                        Dine in our exquisite, stylish Arkle Bar boasting its own unique style and ambiance, the
+                        perfect choice for food lovers and wine connoisseurs alike. Sink back into our plush 1920s
+                        interiors where you may choose to sip on a revitalising cocktail created by our in-house
+                        mixologist, savour a fine wine, whiskey or brandy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="p-3">
+                    <h1 class="text-center" style="color: #fff;">Restaurants in Maynooth</h1>
+                    <p style="color: #fff;"> With some of the best restaurants in Maynooth County Kildare, the
+                        Glenroyal Hotel with Brady's Bar, The Sodja Restaurant & Vine Market Cafe promises to
+                        delight both the casual & seasoned diners alike. Visitors and guests can look forward to a
+                        variety of dishes while also catering for healthier options.
+                        To Find Us -
+                        Just a stroll from Maynooth Town, 20 minutes from Dublin, and less than 40 minutes from the
+                        airport.
+
+                        With excellent national rail & bus and motorway connections on our door step, we're close to
+                        everywhere! You can book your parties / weddings and other such events with us using our
+                        contact line + 353 0894787029 or you can email us at SodjaResturant@gmail.com, For more
+                        information about travel and site's of
+                        Maynooth please come visit <a href="https://maynoothtown.ie/" target="_blank">https://maynoothtown.ie/</a>
+                        where you can find more excluseive information about our Town.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+</div>
+<!-- End of About Section -->
+
+<!-- Menu Section -->
+<!-- I used a grid system for my menu section  -->
+<div class="container-fluid" style="background-color: rgb(255, 255, 255);">
+    <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(255, 255, 255);">
+        <div class="row" style="border: 1px solid #fff;">
+            <div class="col-12 pt-3">
+                <h1 class="text-center display-2" id="Menu-id" style="color: rgb(0, 0, 0);"> Menu <img
+                        src="{% static 'assets/icon.png' %}" alt="" width="90" height="90"></h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row p-5 g-5">
+            <div class="col">
+            <img src="{% static 'assets/steak.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+            <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                Steak | price: €14.55
+            </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/ham-cheese-sandwich.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+            <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                Ham-Cheese Sandwich | price: €8.55
+            </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/salmon.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+            <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                Salmon | price: €14.55
+            </p> 
+            </div>
+
+        </div>
+        <div class="row p-5 g-5">
+            <div class="col">
+                <img src="{% static 'assets/chicken-wings.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Chicken-Wings | price: €10.25
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/burger-fries.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Burger-fries | price: €9.25
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/soup.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Soup | price: €7.55
+                </p> 
+            </div>
+            
+
+        </div>
+        <div class="row p-5 g-5">
+            <div class="col">
+                <img src="{% static 'assets/lamb-chops.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    lamb-chops | price: €15.55
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/pork-chops.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    pork-chops & Veg | price: €14.55
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/vegan-wraps.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Vegan-Wraps | price: €9.55
+                </p> 
+            </div>
+
+        </div>
+        <div class="row p-5 g-5">
+            <div class="col">
+                <img src="{% static 'assets/pancakes.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Pancakes | price: €10.55
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/sushi.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Sushi | price: €11.95
+                </p> 
+            </div>
+            <div class="col">
+                <img src="{% static 'assets/pizza.jpg' %}" class="" style="border: 3px solid black;" alt="" width="360" height="360">   
+                <p class="text-center" style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    Pizza | price: €9.55
+                </p> 
+            </div>
+
+        </div>
+    </div>
+    <hr>
+</div>
+<!-- End Of Menu Section -->
 
 
 
-
-{% endblock %}

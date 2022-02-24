@@ -19,5 +19,5 @@ from bookings import views
 
 urlpatterns = [
     path("", include("bookings.urls")),
-   
+    path('accounts/', include('allauth.urls')),
 ]

@@ -22,4 +22,6 @@
 
 24/02/2022 - start on my register (Sign-up.html) webpage.
 
-25/02/2022 - finish Authorisation - part 2. 
+25/02/2022 - finish Authorisation - part 2.
+
+26/02/1011 - start on my book Tables template and research how to create it.

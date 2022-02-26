@@ -24,4 +24,6 @@
 
 25/02/2022 - finish Authorisation - part 2.
 
-26/02/1011 - start on my book Tables template and research how to create it.
+26/02/2022 - start on my book Tables template and research how to create it.
+
+27/02/2022 - fix models.py and forms/views too.

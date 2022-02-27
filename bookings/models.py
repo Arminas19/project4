@@ -10,5 +10,5 @@ class bookTable(models.Model):
     last_name = models.CharField(max_length=50)
     people = models.IntegerField()
     pick_date = models.DateField()
-    pick_time = models.DateTimeField()
+    pick_time = models.TimeField()
    

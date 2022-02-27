@@ -32,7 +32,7 @@
                         <a class="nav-link nav-link-header" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item nav-item-header">
-                        <a class="nav-link nav-item-header active" href="./book-table.html">Book Tables</a>
+                        <a class="nav-link nav-item-header active" href="">Book Tables</a>
                     </li>
                 </ul>
             </div>
@@ -41,18 +41,21 @@
     <div style="background-color:#fff;">
 
     
-<!-- <div class="container mt-5 col-md-4" style="background-color: #fff; border: 3px solid grey;">
+<div class="container mt-5 col-md-4" style="background-color: #fff; border: 3px solid grey;">
         <form action="" method="post">
+            <div class="row-12 mb-5">
+                <h1 class="text-center" style="font-size: 55px; color: grey;"> Book A Table </h1>
+            </div>
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <div class="col-12">
             <button type="submit" class="btn btn-secondary mb-3 mt-2">Submit</button>
           </div>
     </form> 
-</div> -->
+</div>
 
 
-    <div class="container mt-5 col-md-4" style="background-color: #fff; border: 3px solid grey;">
+    <!-- <div class="container mt-5 col-md-4" style="background-color: #fff; border: 3px solid grey;">
         <div class="row-12 mb-5">
             <h1 class="text-center" style="font-size: 55px; color: grey;"> Book A Table </h1>
         </div>
@@ -87,7 +90,7 @@
         </div>
       </form>
       <hr style="Visibility: hidden;">
-</div>
+</div> -->
 <hr style="Visibility: hidden;">
 <hr style="Visibility: hidden;">
 <hr style="Visibility: hidden;">

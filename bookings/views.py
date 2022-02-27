@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
+from django.views.generic.edit import CreateView
 from django.views import generic
-from django.views.generic import CreateView
 from .models import bookTable
 from .forms import BookTableForm
 
@@ -18,7 +18,6 @@ def loggedin(request):
 
 def bookTables(request):
     form = BookTableForm()
-    model = bookTable
-    context = {'form': form}
-    return render(request, 'book-table.html', context)
+    mydict = {'form': form}
+    return render(request, 'book-table.html', context=mydict)
 

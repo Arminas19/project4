@@ -27,3 +27,5 @@
 26/02/2022 - start on my book Tables template and research how to create it.
 
 27/02/2022 - fix models.py and forms/views too.
+
+28/02/2022 - start styling my form in book-tables.html.

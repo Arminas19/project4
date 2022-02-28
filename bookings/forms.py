@@ -2,15 +2,27 @@ from django import forms
 from django.forms import ModelForm
 from .models import bookTable
 
+class DateInput(forms.DateInput):
+    input_type = 'pick_date'
 
 class BookTableForm(ModelForm):
     class Meta:
         model = bookTable 
         fields = '__all__'
         widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'people': forms.NumberInput(attrs={'class': 'form-control'}),
-            'pick_date': forms.DateInput(attrs={'class': 'form-control'}),
-            'pick_time': forms.TimeInput(attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Brian'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Smite'}),
+            'people': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': '3'}),
+           'pick_date': forms.DateInput(
+                format=('%d/%m/%Y'),
+                attrs={'class': 'form-control', 
+                       'placeholder': 'Select a date',
+                       'type': 'date' 
+                      }),
+            'pick_time': forms.TimeInput(
+                format=('%H:%M'),
+                attrs={'class': 'form-control',
+                'placeholder': 'Select a Time',
+                'type' : 'time'
+                }),
         }

@@ -60,7 +60,7 @@
                 <hr>
             </div>
 
-            {% if BookTableForm.is_vaild %}
+            {% if request.method == "POST" %}
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Well done!</h4>
                 <p>You have successfully booked a table with sodja resturunat. If you need anything else please feel free to contact us at email: Sodja@gmail.com or contact us with mobile@ +353 0894786690.</p>
@@ -69,7 +69,7 @@
               </div>
             {% else %}
             
-            <form class="row g-3" >
+            <form class="row g-3" method="POST" >
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label" style="font-weight: bold;">First Name</label>
                  

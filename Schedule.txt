@@ -34,4 +34,5 @@
 
 02/03/2022 - start on my read.me file 
 
-03/03/2022 - do more work on the read me file and classed based views.
+03/03/2022 - do more work on the read me file and classed based views. also create admin.
+

@@ -37,3 +37,4 @@
 03/03/2022 - do more work on the read me file and classed based views. also create admin. 
 my website link - https://8000-arminas19-project4-2m5dti8hytb.ws-eu34.gitpod.io/
 
+04/03/2022 - research and implement a class based view for my form. 

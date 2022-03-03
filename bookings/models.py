@@ -11,4 +11,7 @@ class bookTable(models.Model):
     people = models.IntegerField()
     pick_date = models.DateField()
     pick_time = models.TimeField()
+
+    def __str__(self):
+        return f' {self.first_name} {self.last_name} booked a table on the {self.pick_date} {self.pick_time} with {self.people} people'
    

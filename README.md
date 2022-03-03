@@ -60,6 +60,15 @@
    + The sign-up page has a link to the login page just in case the user already has an account. 
 
 *** 
+**Book-Table Page**
+ * Book-Table Page
+![Book-Table-Page](static/assets/book-table.PNG)
+   + The user can only access this page if they are logged in.
+   + The user has to fill in all the required boxes in order to book a table.
+   + Once the user submits the form, a success message will appear to note that the booking was successful.  
+![Success-Message](static/assets/success-message.PNG)
+
+*** 
    ## Testing
    + I have tested the sign-up form and I have confirmed that the button and link work, you need an email for the email input and all inputs are set to require. 
    + I have confirmed that all the icons and font work.

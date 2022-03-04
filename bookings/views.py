@@ -32,8 +32,13 @@ class BookingTables(TemplateView):
     def post(self, request, *args, **kwargs):
         form = BookTableForm(data=request.POST)
         if form.is_valid():
-            form = BookTableForm()
-            
+            first_name = request.POST['first_name']
+            last_name = request.POST['last_name']
+            people = request.POST['people']
+            pick_date = request.POST['pick_date']
+            pick_time = request.POST['pick_time']
+            BookTable = bookTable(first_name=first_name, last_name=last_name, people=people, pick_date=pick_date, pick_time=pick_time)
+            BookTable.save()
         else:
             form = BookTableForm()
 

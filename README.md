@@ -79,19 +79,22 @@
 * Solved Bugs
    + I had an issue with adding the FIFA video to my website, later I found out with some help from code institute's Tutor assistance that it was my link and I didn't embed it before adding it to my code. 
    + I had an issue with the display: inline; it wouldn't work properly but I figured it out and margined the home content till it was level.
-   *** 
+   
+   **Unfixed Bugs** 
+   + I can't move my iframe video to the left, I tried margin, padding, and floats but the only thing that worked was a one line style but the problem is that I cant use @media on it to set height and width, just couldn't connect my CSS to this element. 
+   + If I had more time I would try and make this website a bit more responsive. 
+   ***
 **Validator Testing**
 * HTML
    + No errors or warnings were found for all pages - index More or sign-up.
 * CSS 
    + No errors were found but a warning with the contents of 'Imported style sheets are not checked indirect input and file upload modes' which doesn't relate to my CSS.
+* Python
+   + 
 * Accessibility 
    + I have checked lighthouse and confirmed that my website is easily accessible to users.
    ![Lighthouse scores image](assets/css/images/Lighthouse.PNG)
-**Unfixed Bugs** 
-   + I can't move my iframe video to the left, I tried margin, padding, and floats but the only thing that worked was a one line style but the problem is that I cant use @media on it to set height and width, just couldn't connect my CSS to this element. 
-   + If I had more time I would try and make this website a bit more responsive. 
-   ***
+*** 
    ## Development
 * My website was deployed on GitHub pages, they are the steps I took:
    + In GitHub repository, I navigated to settings. 
@@ -99,13 +102,14 @@
    + In the source drop-down menu, I selected my branch as - main, and then I got the link to my website. 
    * Here is the link to my website - https://arminas19.github.io/Project1/ 
  ### Credits 
-   **Content** 
-   + I took Some of the code from the sign-up form the Love Running Project or 'Challenge'. 
-   + I had some inspiration from the links and active class from the Love Running Project, but I didn't copy and paste I just wrote it myself.
+**Content** 
+   + I got inspiration from code institute's "i think before i blog" section. 
+   + I had looked over Django documentation and stack overflow to check for syntax that I didn't know how to use.
+   
 **Media**
-   +  I copy and Pasted some text from the officially EA Fifa 22 website - here is their link: https://www.ea.com/en-gb/games/fifa/fifa-22.
-   + All my images were taken from this link: https://www.bing.com/images/search?q=fifa+22&form=HDRSC3&first=1&tsc=ImageHoverTitle.  
-   + I also used google fonts and icons - link for that: https://fontawesome.com/v5.15/icons/comments?style=solid.
+   + I copy and pasted a small fraction of text from Glenroyal restaurant into my Sodja restaurant project.
+   + All my images were taken from google images.  
+   + I got my icon image in google.
 ## Resolution Sizes
-   + fully responsive.
+   + Fully responsive sizes.
 

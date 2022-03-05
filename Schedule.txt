@@ -40,3 +40,5 @@ my website link - https://8000-arminas19-project4-2m5dti8hytb.ws-eu34.gitpod.io/
 04/03/2022 - research and implement a class based view for my form. 
 
 05/03/2022 - talk with mentor to figure out how to customize my class based view.
+
+06/03/2022 - get help from mentor for models and views, also add comments to code.

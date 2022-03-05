@@ -2,8 +2,10 @@ from django import forms
 from django.forms import ModelForm
 from .models import bookTable
 
+
 class DateInput(forms.DateInput):
     input_type = 'pick_date'
+
 
 class BookTableForm(ModelForm):
     class Meta:
@@ -26,3 +28,5 @@ class BookTableForm(ModelForm):
                 'type' : 'time'
                 }),
         }
+
+

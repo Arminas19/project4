@@ -33,7 +33,6 @@ class BookingTables(TemplateView):
     def post(self, request, *args, **kwargs):
         form = BookTableForm(data=request.POST)
         Table_booked = False
-        table = 20
         if form.is_valid():
             first_name = request.POST['first_name']
             last_name = request.POST['last_name']
@@ -41,20 +40,15 @@ class BookingTables(TemplateView):
             pick_date = request.POST['pick_date']
             pick_time = request.POST['pick_time']
             
-            for i in people:
-                if len(people) <= 5 and len(people) > 0:
-                    # Tablecount == -1
-                    table == -1
-                    if len(people) > 5 and len(people) <= 10:
-                        # Tablecount == -2
-                        table == -2
-                        if len(people) >= 10 and len(people) <=15:
-                            # Tablecount == -3
-                            table == -3
-                            if len(people) >=15 and len(people) <=20:
-                                # Tablecount == -4
-                                table == -4
-            
+            if len(people) <= 5 and len(people) > 0:
+                Tablecount == -1
+                if len(people) > 5 and len(people) <= 10:
+                    Tablecount == -2
+                    if len(people) >= 10 and len(people) <=15:
+                        Tablecount == -3
+                        if len(people) >=15 and len(people) <=20:
+                            Tablecount == -4
+                            
             if Tablecount > 0:
                 print('tables available')
             else:

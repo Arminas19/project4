@@ -27,13 +27,6 @@ class bookTable(models.Model):
 
     def __str__(self):
         return f' {self.first_name} {self.last_name} booked a table on the {self.pick_date} {self.pick_time} with {self.people} people'
-   
-    # def clean_people(self, *args, **kwargs):
-    #     people = self.cleaned_data['people']
-    #     if len(people) <= 20 and len(people) <= 0:
-    #         raise ValidationError('keep it beween 1 and 20 people')
-    #     else:
-    #         return people
 
 
 class TableInverntory(models.Model):

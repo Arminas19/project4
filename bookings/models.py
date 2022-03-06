@@ -7,13 +7,13 @@ STATUS = ((0, "Occupied"), (1, "Ordered"))
 
 # MAX_TABLES = 20
 
-# class Booking(models.Model):
-#     first_name = models.CharField(max_length=50)
-#     last_name = models.CharField(max_length=50)
-#     pick_date = models.DateField()
-#     pick_time = models.TimeField()
+class Booking(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    pick_date = models.DateField()
+    pick_time = models.TimeField()
 
-#     tables = 
+
 
 class bookTable(models.Model):
     first_name = models.CharField(max_length=50)
@@ -30,4 +30,7 @@ class bookTable(models.Model):
 
 
 class TableInverntory(models.Model):
-    Tablecount = models.IntegerField()
+    Tablecount = models.IntegerField(default=20)
+    Tables_available = models.BooleanField(default=False)
+
+    Tables = 0

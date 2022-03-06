@@ -15,7 +15,9 @@
 </head>
 
 <body>
-<!-- This is my main nav bar  -->
+<!-- This is my main nav bar. You can use the Login or register links but you cannot use the Book Tables link becuase the user has
+logged in yet.
+-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="#">Sodja Resturaunt
@@ -41,6 +43,7 @@
         </div>
     </nav>
     {% block content %}
+    <!-- End of my navbar-->
 <!-- This is my image and container that is at the top of the page -->
     <div class="container-fluid bg-dark bg-gradient">
         <div id="resturanunt-image-container">
@@ -51,7 +54,9 @@
         <hr>
     </div>
 <!-- This is my container, Columns and rows (grid system) that i use for my about page -->
-<!-- About Section -->
+<!-- About Section - is used to discribe the resturaunt's area and the about section talks about the food and the resturaunt's awards. This is 
+so that the user get's excited about going to this resturaunt.
+-->
     <div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.678);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(55, 57, 65);">
             <div class="row" style="border: 1px solid #fff;">
@@ -112,7 +117,7 @@
     </div>
 <!-- End of About Section -->
 
-    <!-- Menu Section -->
+    <!-- Menu Section - is used to display the menu of our resturaunt. (the price and picture of the meal is also displayed)-->
     <!-- I used a grid system for my menu section  -->
     <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(255, 255, 255);">
@@ -212,6 +217,7 @@
         <hr>
     </div>
     <!-- End Of Menu Section -->
+    <!-- This is my footer, The footer dosnt stick directly to the bottom so i use a background-color to mask the footer a bit. -->
     {% endblock %}
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark mt-auto"
         id="footer">

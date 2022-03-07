@@ -2,10 +2,8 @@ from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
 from django.views import generic, View
-from .models import bookTable
-from .models import Booking
-from .models import TableInverntory
-from .forms import BookTableForm
+from .models import newbookTable, newBooking, TableInverntory
+from .forms import BookTableForm, BookPeople
 
 def index(request):
     return render(request, 'index.html', context=None)
@@ -25,10 +23,12 @@ class BookingTables(TemplateView):
 
     def get(self, request):
         form = BookTableForm()
-        return render(request, 'book-table.html', context={'form': form})
+        form2 = BookPeople()
+        return render(request, 'book-table.html', context={'form': form, 'form2': form2})
 
     def post(self, request, *args, **kwargs):
         form = BookTableForm(data=request.POST)
+        form2 = BookPeople(data=request.POST)
         Table_booked = False
         if form.is_valid():
             first_name = request.POST['first_name']
@@ -60,7 +60,7 @@ class BookingTables(TemplateView):
             
             Table_booked = True
 
-            BookTable = bookTable(first_name=first_name, last_name=last_name, people=people, pick_date=pick_date, pick_time=pick_time)
+            BookTable = bookTable(people=people)
             BookTable.save()
 
             Booking = Booking(first_name=first_name, last_name=last_name, pick_date=pick_date, pick_time=pick_time)
@@ -68,6 +68,7 @@ class BookingTables(TemplateView):
 
         else:
             form = BookTableForm()
+            from2 = BookPeople()
 
 
-        return render(request, 'book-table.html', context={'form': form, 'Table_booked': Table_booked})
+        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked})

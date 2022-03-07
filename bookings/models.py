@@ -5,28 +5,24 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 STATUS = ((0, "Occupied"), (1, "Ordered"))
 
-# MAX_TABLES = 20
-
-class Booking(models.Model):
+class newBooking(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     pick_date = models.DateField()
     pick_time = models.TimeField()
 
+    def __str__(self): 
+        return f' {self.first_name} {self.last_name} booked a table on the {self.pick_date} {self.pick_time} '
 
-
-class bookTable(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+class newbookTable(models.Model):
+    Booking = models.ForeignKey(newBooking, on_delete=models.CASCADE)
     people = models.IntegerField(validators=[
             MaxValueValidator(20),
             MinValueValidator(1)
         ])
-    pick_date = models.DateField()
-    pick_time = models.TimeField()
 
     def __str__(self):
-        return f' {self.first_name} {self.last_name} booked a table on the {self.pick_date} {self.pick_time} with {self.people} people'
+        return f' {self.people} guests will be attending. '
 
 
 class TableInverntory(models.Model):

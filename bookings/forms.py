@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
-from .models import bookTable
+from .models import newbookTable
+from .models import newBooking
 
 
 class DateInput(forms.DateInput):
@@ -9,12 +10,11 @@ class DateInput(forms.DateInput):
 
 class BookTableForm(ModelForm):
     class Meta:
-        model = bookTable 
+        model = newBooking 
         fields = '__all__'
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Brian'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Smite'}),
-            'people': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': '3'}),
            'pick_date': forms.DateInput(
                 format=('%d/%m/%Y'),
                 attrs={'class': 'form-control', 
@@ -29,4 +29,11 @@ class BookTableForm(ModelForm):
                 }),
         }
 
+class BookPeople(ModelForm):
+    class Meta:
+        model = newbookTable
+        fields = '__all__'
+        widgets = {
+            'people': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': '3'}),
+        }
 

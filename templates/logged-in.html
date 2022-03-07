@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<!-- This is my main nav bar  -->
+<!-- This is my main nav bar, When the user creates an account and logges in, they can now enter 'Book Tables'.  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="#">Sodja Resturaunt
@@ -38,7 +38,7 @@
         </div>
     </nav>
     {% block content %}
-<!-- This is my image and container that is at the top of the page -->
+<!-- This is my image and container that is at the top of the page, the <hr> are here to create space between containers-->
     <div class="container-fluid bg-dark bg-gradient">
         <div id="resturanunt-image-container">
             <img src="{% static 'assets/edit3.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Resturaunt"
@@ -47,7 +47,7 @@
         <hr>
         <hr>
     </div>
-<!-- This is my container, Columns and rows (grid system) that i use for my about page -->
+<!-- This is my container, Columns and rows (grid system) that i use for my about section -->
 <!-- About Section -->
     <div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.678);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(55, 57, 65);">
@@ -110,7 +110,7 @@
 <!-- End of About Section -->
 
     <!-- Menu Section -->
-    <!-- I used a grid system for my menu section  -->
+    <!-- I use a grid system for my menu section just like my about section. -->
     <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
         <div class="container mb-5 mt-5" style="border: 1px solid #fff; background-color: rgb(255, 255, 255);">
             <div class="row" style="border: 1px solid #fff;">
@@ -210,6 +210,7 @@
     </div>
     <!-- End Of Menu Section -->
     {% endblock %}
+     <!-- This is my footer, The footer dosnt stick directly to the bottom so i use a background-color to mask the footer a bit. -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark mt-auto"
         id="footer">
         <p class="col-md-4 mb-0 text-muted">&copy; 2022 Sodja Company Resturaunt, Inc</p>

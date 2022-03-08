@@ -52,12 +52,18 @@ class BookingTables(TemplateView):
                 Tables_available = False
                 return f'There isnt anymore tables left.'
 
-            if first_name and last_name in request.POST['pick_date'].exists():
-                return print('cannot book you here again, please pick a different date.')
-
-
-
+            newBooking_first_name =  newBooking.objects.filter(first_name__exact=first_name)
+            newBooking_last_name =  newBooking.objects.filter(last_name__exact=last_name)
+            newBooking_pick_date =  newBooking.objects.filter(pick_date__exact=pick_date)
+            if newBooking_first_name == first_name  and newBooking_last_name == last_name and newBooking_pick_date == pick_date:
+                # If user is found display an error message.
+                return message.error(
+                   request, 'You have already booked a table with us!'
+                )
+            else:
+                pass
             
+
             Table_booked = True
 
             BookTable = bookTable(people=people)

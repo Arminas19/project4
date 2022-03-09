@@ -29,10 +29,19 @@ class BookTableForm(ModelForm):
                 }),
         }
 
+    def clean_name(self):
+        first_name = self.cleaned_data.get('first_name')
+        last_name = self.cleaned_data.get('last_name')
+        for instance in newBooking.objects.all():
+            if instance.first_name == first_name and instance.last_name == last_name:
+                raise forms.ValidationError('That name is already Booked!')
+            return first_name and last_name
+
+
 class BookPeople(ModelForm):
     class Meta:
         model = newbookTable
-        fields = '__all__'
+        fields = ('people',)
         widgets = {
             'people': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': '3'}),
         }

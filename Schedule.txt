@@ -47,4 +47,6 @@ my website link - https://8000-arminas19-project4-2m5dti8hytb.ws-eu34.gitpod.io/
 
 08/03/2022 - in views.py add a double bookings function and add comments to my account templates. sign-in, sign-out and register.
 
-09/03/2022 - comment on index.html and add on to my views.py file.
+09/03/2022 - coment on index.html and add on to my views.py file.
+
+10/03/2022 - get help from tutor or mentor with my validations. and comment on book-table.html template.

@@ -22,7 +22,7 @@ class newbookTable(models.Model):
         ])
 
     def __str__(self):
-        return f' {self.people} guests will be attending. '
+        return f'{self.Booking} {self.people} guests will be attending. '
 
 
 class TableInverntory(models.Model):

@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
+from django.core.exceptions import ObjectDoesNotExist
 from django.views import generic, View
 from .models import newbookTable, newBooking, TableInverntory
 from .forms import BookTableForm, BookPeople
@@ -53,15 +54,19 @@ class BookingTables(TemplateView):
             # else:
             #     TableInverntory.Tables_available = False
             #     errorMessage = 'There isnt enough tables, please book a different time!.'
-
-            newBooking_first_name =  newBooking.objects.filter(first_name__exact=first_name)
-            newBooking_last_name =  newBooking.objects.filter(last_name__exact=last_name)
-            newBooking_pick_date =  newBooking.objects.filter(pick_date__exact=pick_date)
-
-            if newBooking_first_name == first_name  and newBooking_last_name == last_name and newBooking_pick_date == pick_date:
-                # If user is found display an error message.
+            
+            try:
+                already_full = newbookTable.objects.select_related('Booking').filter(Booking__pick_date = pick_date).get()
+                print(already_full)
+                errorMessage = 'Sorry please book a different date, we are already full!'
+            except:
+                already_full = False
+            
+            try:
+                already_booked = newBooking.objects.filter(first_name=first_name, last_name=last_name, pick_date=pick_date).get()
                 errorMessage = 'This User has already booked a table with us.'
-           
+            except ObjectDoesNotExist:
+                already_booked = False
             
 
             if not errorMessage:
@@ -75,7 +80,7 @@ class BookingTables(TemplateView):
         else:
             form = BookTableForm()
             from2 = BookPeople()
-            return render(request, 'book-table.html', context={'errorMessage': errorMessage})
+            return render(request, 'book-table.html', context={})
 
 
-        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked})
+        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage})

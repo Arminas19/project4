@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404
+from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
 from django.core.exceptions import ObjectDoesNotExist
@@ -18,7 +18,6 @@ def signUp(request):
 def loggedin(request):
     return render(request, 'logged-in.html', context=None)
 
-
 class BookingTables(TemplateView):
     template_name = 'book-tables.html'
 
@@ -31,7 +30,6 @@ class BookingTables(TemplateView):
         form = BookTableForm(data=request.POST)
         form2 = BookPeople(data=request.POST)
         Table_booked = False
-        
         if form.is_valid():
             first_name = request.POST['first_name']
             last_name = request.POST['last_name']
@@ -39,7 +37,7 @@ class BookingTables(TemplateView):
             pick_date = request.POST['pick_date']
             pick_time = request.POST['pick_time']
             errorMessage = None
-            
+            Bookings = newBooking.objects.all()
             # if len(people) <= 5 and len(people) > 0:
             #     TableInverntory.Tables == +1
             #     if len(people) > 5 and len(people) <= 10:
@@ -54,11 +52,14 @@ class BookingTables(TemplateView):
             # else:
             #     TableInverntory.Tables_available = False
             #     errorMessage = 'There isnt enough tables, please book a different time!.'
-            
+
             try:
                 already_full = newbookTable.objects.select_related('Booking').filter(Booking__pick_date = pick_date).get()
                 print(already_full)
-                errorMessage = 'Sorry please book a different date, we are already full!'
+                if len(people) in already_full <= 100:
+                    errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
+                else:
+                    pass
             except:
                 already_full = False
             
@@ -83,4 +84,22 @@ class BookingTables(TemplateView):
             return render(request, 'book-table.html', context={})
 
 
-        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage})
+        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'Bookings': Bookings})
+
+class cancelle_reservations(TemplateView):
+    template_name = 'cancellations.html'
+    model = newbookTable
+
+    def get(self, request, Booking_id):
+        bookTables = newbookTable.objects.all()
+        Bookings = newBooking.objects.all()
+        Bookings = get_object_or_404(newBooking, id=Booking_id)
+        form = BookTableForm(instance=Bookings)
+        form2 = BookPeople(instance=Bookings)
+        context = {
+        'form': form,
+        'form2': form2,
+        'bookTables': bookTables,
+        'Bookings': Bookings
+        }
+        return render(request, 'cancellations.html', context)

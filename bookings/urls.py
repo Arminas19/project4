@@ -9,5 +9,5 @@ urlpatterns = [
    path('Sign-up.html', views.signUp, name='Sign-up'),
    path('logged-in.html', views.loggedin, name='logged-in'),
    path('book-table.html', views.BookingTables.as_view(), name='book-table'),
-   
+   path('delete/<Booking_id>', views.cancelle_reservations.as_view(), name='delete_booking')
 ]

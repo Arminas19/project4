@@ -52,3 +52,5 @@ my website link - https://8000-arminas19-project4-2m5dti8hytb.ws-eu34.gitpod.io/
 10/03/2022 - get help from tutor or mentor with my validations. and comment on book-table.html template.
 
 11/03/2022 - get help for my views.py file.
+
+12/03/2022 - ask slack and mentor for advice. 

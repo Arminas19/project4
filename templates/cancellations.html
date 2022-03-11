@@ -53,32 +53,49 @@
     </nav>
     <!-- This is my main-content of this page.I set the background color to white so that the content would stand out.   -->
     <div style="background-color:#fff;">
-      
+    <table>
+      {% for bookTable in bookTables%}
+        <tr>
+            <td>
+                {{bookTable.people}}
+            </td>
+        </tr>
+      {% endfor %}
+      {% for Booking in Bookings %}
+      <tr>
+        <td>
+            {{Booking.first_name}}
+        </td>
+        <td>
+            {{Booking.last_name}}
+        </td>
+        <td>
+            {{Booking.pick_date}}
+        </td>
+        <td>
+            {{Booking.pick_time}}
+        </td>
+    </tr>
+      {% endfor %}
+    </table>
         <div class="container mt-5 col-md-6" style="background-color: #fff; border: 3px solid grey;">
             <div class="row-12 mb-5">
                 <h1 class="text-center" style="font-size: 55px; color: grey; font-weight: bold; letter-spacing: 1px;">
-                    Book A Table </h1>
+                    Cancellations </h1>
                 <hr>
             </div>
             <!-- Once the user submites the form and validation is successful, this alert will pop-up instead of the form. So that the user understands
             that the form has been sent successfully.
             -->
-            {% if Table_booked == True %}
+            {% if cancelle_reservations == True %}
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Well done!</h4>
-                <p>You have successfully booked a table with sodja resturunat. If you need anything else please feel free to contact us at email: Sodja@gmail.com or contact us with mobile@ +353 0894786690.</p>
+                <p>You have successfully cancelled your reservation</p>
                 <hr>
-                <p class="mb-0">Be sure to cancelle or rearrange date if you feel like you cannot attended, contact us for more information.</p>
-              </div>
-              <h2> If you would like to cancelle your reservation, please use this button or contact our staff.  </h2>
-              {% for Booking in Bookings %}
-              <a href="/delete/{{ Booking_id }}">
-                  {% endfor %}
-              <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
-              </a>
+                
             {% else %}
             
-            <form class="row g-3" method="POST" >
+            <form class="row g-3" method="GET" >
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label" style="font-weight: bold;">First Name</label>
                     {{ form.first_name }}
@@ -98,28 +115,26 @@
                     {% endif %}
 
                 <div class="col-md-6 mt-5">
-                    <label for="inputCity" class="form-label" style="font-weight: bold;">Pick Date</label>
+                    <label for="inputCity" class="form-label" style="font-weight: bold;">Date</label>
                     
                     {{ form.pick_date }}
                     {% csrf_token %}
                 </div>
                 <div class="col-md-6 mt-5">
-                    <label for="inputCity" class="form-label" style="font-weight: bold;">Pick Time</label>
+                    <label for="inputCity" class="form-label" style="font-weight: bold;">Time</label>
                    
                     {{ form.pick_time }}
                     {% csrf_token %}
                 </div>
                 <div class="col-12 mt-5">
-                    <label for="" class="mb-3" style="font-weight: bold;">How many people are attending?</label>
+                    <label for="" class="mb-3" style="font-weight: bold;">people are attending</label>
                     {{ form2.people }}
                     {% csrf_token %}
-                    <p class="mt-3"> <strong>Note:</strong> keep the people between 1-20 or else you will have to restart your form. (max 20 people) </p>
-                    <p class="mt-3">Only 5 people per table is allowed, if you are coming with
-                        more than 5 people please note that you will be setted in different tables. </p>
+                    
                 </div>
-                <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary mb-3">Submit Form</button>
-                </div>
+                <a href="#">
+                    <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
+                    </a>
             </form>
             {% endif %}
             <hr style="Visibility: hidden;">

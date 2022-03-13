@@ -54,19 +54,21 @@ class BookingTables(TemplateView):
                 try:
                     print('2nd try')
                     already_full = newBooking.objects.filter(pick_date=pick_date)
+                    peoples = newbookTable.objects.filter(people=people)
                     for booking in already_full:
-                        print(booking)
+                        #print(booking)
+                        print('hi')
                     booked_people = []
-                    for bookings in already_full:
-                        booked_people.append(bookings.people)
+                    for e in peoples:
+                        print(e.people)
+                        booked_people.append(e.people)
                     number_of_booked = sum(booked_people)
-                    print(number_of_booked + 'this is number_of_booked')
+                    print(number_of_booked)
                     if number_of_booked <= 18:
                         errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
                 except:
                     already_full = False
-                
-              
+                    
             # try:
             #     # already_full = newbookTable.objects.select_related('Booking').filter(Booking__pick_date = pick_date)
             #     # print(already_full, 'already full')

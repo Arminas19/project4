@@ -71,10 +71,11 @@
                 <p class="mb-0">Be sure to cancelle or rearrange date if you feel like you cannot attended, contact us for more information.</p>
               </div>
               <div>
-                  <h3> Your Bookings: </h3>
+                  <h2> Your Bookings: </h2>
                   <table>
-                    <h2> If you would like to cancelle your reservation, please use this button or contact our staff.  </h2>
+                    
                   {% for booking in allBookings %}
+                  <hr style="Visibility: hidden;">
                     <tr>
                         <td>
                         <p> {{ booking }}</p>

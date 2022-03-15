@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from django.views.generic.edit import CreateView
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DeleteView, ListView, CreateView
 from django.core.exceptions import ObjectDoesNotExist
 from django.views import generic, View
+from django.urls import reverse_lazy
 from .models import newbookTable, newBooking, TableInverntory
 from .forms import BookTableForm, BookPeople
 
@@ -18,8 +19,9 @@ def signUp(request):
 def loggedin(request):
     return render(request, 'logged-in.html', context=None)
 
-class BookingTables(TemplateView):
+class BookingTables(CreateView):
     template_name = 'book-tables.html'
+  
 
     def get(self, request):
         form = BookTableForm()
@@ -27,6 +29,7 @@ class BookingTables(TemplateView):
         return render(request, 'book-table.html', context={'form': form, 'form2': form2})
 
     def post(self, request, *args, **kwargs):
+        model = newBooking
         # form2 display's the newbookTable model onto the view.
         # form is newBooking model.
         form = BookTableForm(data=request.POST)
@@ -40,71 +43,53 @@ class BookingTables(TemplateView):
             pick_date = request.POST['pick_date']
             pick_time = request.POST['pick_time']
             errorMessage = None
-            Bookings = newBooking.objects.all()
-            
+            allBookings = newBooking.objects.all()
+            # newBooking.objects.create(first_name=first_name, last_name=last_name, pick_date=pick_date, pick_time=pick_time)
 
             # This code here is getting the first, last name and the date that the user has selected and checking if it exist's, 
             # if it dose exist than dislpay the errorMessage, if not than proceed with the next validation.
             try:
-                already_booked = newBooking.objects.filter(first_name=first_name, last_name=last_name, pick_date=pick_date).get()
-                print(already_booked)
-                errorMessage = 'Sorry only one booking per person per same date allowed.'
+                already_full = newBooking.objects.filter(first_name=first_name, last_name=last_name, pick_date=pick_date).get()
+                print(already_full)
+                errorMessage = 'Sorry booking on the same date is not allowed, please pick a different date.'
             except ObjectDoesNotExist:
-                already_booked = False
+                already_full = False
                 try:
                     print('2nd try')
-                    already_full = newBooking.objects.filter(pick_date=pick_date)
-                    peoples = newbookTable.objects.filter(people=people)
-                    for booking in already_full:
-                        #print(booking)
-                        print('hi')
-                    booked_people = []
-                    for e in peoples:
-                        print(e.people)
-                        booked_people.append(e.people)
-                    number_of_booked = sum(booked_people)
+                    already_full = newBooking.objects.filter(pick_date=pick_date).all()
+                    # peoples = newbookTable.objects.filter(people=people)
+                    # for booking in already_full:
+                    #     print(booking)
+                    # booked_people = []
+                    # for e in peoples:
+                    #     print(e.people)
+                    #     booked_people.append(e.people)
+                    # number_of_booked = sum(booked_people)
+                    number_of_booked = 0
+                    for reservation in already_full:
+                        tables = reservation.tables.all()
+                        for table in tables:
+                            number_of_booked += table.people
+                    # print('Hello')
+                    # number_of_booked = sum([i.table.people for i in already_full if i.table])
                     print(number_of_booked)
-                    if number_of_booked <= 18:
+                    print('Hello again')
+                    if number_of_booked >= 100:
                         errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
-                except:
-                    already_full = False
-                    
-            # try:
-            #     # already_full = newbookTable.objects.select_related('Booking').filter(Booking__pick_date = pick_date)
-            #     # print(already_full, 'already full')
-            #     # if len(already_full) >= 1:
-            #     #     errorMessage = 'Sorry only one booking per person per timeslot, Thank You'
-            #     #     return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'Bookings': Bookings})
-            #     if: 
-            #         # Im getting the user's selected date here. im using the newbookTable model here becuase their is a foreignKey which i can use to 
-            #         # check the user's selected date and also the people queryset in the newbookTable objects.
-            #         already_full = newbookTable.objects.select_related('Booking').filter(Booking__pick_date = pick_date).get()
-            #         # Im going to get the number of people in the user's selected date here. 
-            #         print(already_full)
-            #         people = already_full.people
-            #         print(people)
-            #         print('-------------------------------------------')
-            #         # Here im checking if the number of people in that date is lower or equals to the max_number of people allowed. 
-            #     if len(people) in already_full <= 18:
-            #         # If the conditions meet, this will display the errorMessage that will prevent the user from booking. 
-            #         print(len(people))
-            #         errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
-            # except:
-            #     # if no errorMessages are displayed, the booking procceds.
-            #     print(len(people))
-            #     already_full = False
-              
-        
+                except Exception as err:
+                    print(err)    
             
             # if no errorMessage are displayed than this will save both the forms.
             if not errorMessage:
                 Booking = newBooking(first_name=first_name, last_name=last_name, pick_date=pick_date, pick_time=pick_time)
                 Booking.save()
-
+                booking_id = Booking.id
+                #print(BookingID)
                 BookTabless = newbookTable(people=people, Booking=Booking)
                 BookTabless.save()
-
+                
                 Table_booked = True
+                return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'booking_id': booking_id, 'allBookings': allBookings})
         else:
             # if the errorMessage dose display this will return empty forms back to the user. 
             form = BookTableForm()
@@ -112,22 +97,26 @@ class BookingTables(TemplateView):
             return render(request, 'book-table.html', context={})
 
 
-        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'Bookings': Bookings})
+        return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'allBookings': allBookings})
 
-class cancelle_reservations(TemplateView):
+
+class cancelle_reservations(DeleteView):
     template_name = 'cancellations.html'
     model = newbookTable
 
-    def get(self, request, Booking_id):
-        bookTables = newbookTable.objects.all()
-        Bookings = newBooking.objects.all()
-        Bookings = get_object_or_404(newBooking, id=Booking_id)
-        form = BookTableForm(instance=Bookings)
-        form2 = BookPeople(instance=Bookings)
+    def get(self, request, booking_id):
+        # print(booking_id)
+        BookTable = get_object_or_404(newBooking, booking_id)
+        form = BookTableForm(instance=BookTable)
         context = {
         'form': form,
-        'form2': form2,
-        'bookTables': bookTables,
-        'Bookings': Bookings
+        'BookTable': BookTable,
+        'booking_id': booking_id
         }
         return render(request, 'cancellations.html', context)
+
+    
+def deleteBooking(request, booking_id):
+    BookTable = get_object_or_404(newBooking, pk=booking_id)
+    BookTable.delete()
+    return redirect('logged-in.html') 

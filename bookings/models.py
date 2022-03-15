@@ -15,7 +15,7 @@ class newBooking(models.Model):
         return f' {self.first_name} {self.last_name} booked a table on the {self.pick_date} {self.pick_time} '
 
 class newbookTable(models.Model):
-    Booking = models.ForeignKey(newBooking, on_delete=models.CASCADE)
+    Booking = models.ForeignKey(newBooking, on_delete=models.CASCADE, related_name="tables")
     people = models.IntegerField(validators=[
             MaxValueValidator(20),
             MinValueValidator(1)

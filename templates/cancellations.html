@@ -53,7 +53,7 @@
     </nav>
     <!-- This is my main-content of this page.I set the background color to white so that the content would stand out.   -->
     <div style="background-color:#fff;">
-    <table>
+    <!-- <table>
       {% for bookTable in bookTables%}
         <tr>
             <td>
@@ -77,7 +77,7 @@
         </td>
     </tr>
       {% endfor %}
-    </table>
+    </table> -->
         <div class="container mt-5 col-md-6" style="background-color: #fff; border: 3px solid grey;">
             <div class="row-12 mb-5">
                 <h1 class="text-center" style="font-size: 55px; color: grey; font-weight: bold; letter-spacing: 1px;">
@@ -126,13 +126,13 @@
                     {{ form.pick_time }}
                     {% csrf_token %}
                 </div>
-                <div class="col-12 mt-5">
+                <!-- <div class="col-12 mt-5">
                     <label for="" class="mb-3" style="font-weight: bold;">people are attending</label>
                     {{ form2.people }}
                     {% csrf_token %}
                     
-                </div>
-                <a href="#">
+                </div> -->
+                <a href="delete/{{ booking.id }}">
                     <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
                     </a>
             </form>

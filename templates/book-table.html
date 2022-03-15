@@ -70,14 +70,24 @@
                 <hr>
                 <p class="mb-0">Be sure to cancelle or rearrange date if you feel like you cannot attended, contact us for more information.</p>
               </div>
-              <h2> If you would like to cancelle your reservation, please use this button or contact our staff.  </h2>
-              {% for Booking in Bookings %}
-              <a href="/delete/{{ Booking_id }}">
-                  {% endfor %}
-              <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
-              </a>
-            {% else %}
-            
+              <div>
+                  <h3> Your Bookings: </h3>
+                  <table>
+                    <h2> If you would like to cancelle your reservation, please use this button or contact our staff.  </h2>
+                  {% for booking in allBookings %}
+                    <tr>
+                        <td>
+                        <p> {{ booking }}</p>
+                        <a href="/cancelle/{{ booking.id }}">
+                        <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
+                        </a>
+                         <hr style="Visibility: hidden;">
+                        </td>
+                     </tr>
+                </table>
+                {% endfor %}
+              </div>
+              {% else %}
             <form class="row g-3" method="POST" >
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label" style="font-weight: bold;">First Name</label>

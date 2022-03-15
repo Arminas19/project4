@@ -95,7 +95,6 @@ class cancelle_reservations(DeleteView):
     model = newbookTable
 
     def get(self, request, booking_id):
-        # print(booking_id)
         BookTable = get_object_or_404(newBooking, booking_id)
         form = BookTableForm(instance=BookTable)
         context = {

@@ -57,23 +57,13 @@ class BookingTables(CreateView):
                 try:
                     print('2nd try')
                     already_full = newBooking.objects.filter(pick_date=pick_date).all()
-                    # peoples = newbookTable.objects.filter(people=people)
-                    # for booking in already_full:
-                    #     print(booking)
-                    # booked_people = []
-                    # for e in peoples:
-                    #     print(e.people)
-                    #     booked_people.append(e.people)
-                    # number_of_booked = sum(booked_people)
                     number_of_booked = 0
                     for reservation in already_full:
                         tables = reservation.tables.all()
                         for table in tables:
                             number_of_booked += table.people
-                    # print('Hello')
                     # number_of_booked = sum([i.table.people for i in already_full if i.table])
                     print(number_of_booked)
-                    print('Hello again')
                     if number_of_booked >= 100:
                         errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
                 except Exception as err:

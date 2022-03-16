@@ -72,8 +72,8 @@ class BookingTables(CreateView):
             # if no errorMessage are displayed than this will save both the forms.
             if not errorMessage:
                 Booking = newBooking(first_name=first_name, last_name=last_name, pick_date=pick_date, pick_time=pick_time)
-                Booking.save()
                 booking_id = Booking.id
+                Booking.save()
                 #print(BookingID)
                 BookTabless = newbookTable(people=people, Booking=Booking)
                 BookTabless.save()
@@ -106,6 +106,21 @@ class cancelle_reservations(DeleteView):
 
     
 def deleteBooking(request, booking_id):
-    BookTable = get_object_or_404(newBooking, pk=booking_id)
-    BookTable.delete()
+    print(booking_id)
+    #BookTable = get_object_or_404(newBooking, id=booking_id)
+    newBooking.objects.get(id=booking_id).delete()
     return redirect('logged-in.html') 
+    # newBooking.objects.get(booking_id).delete()
+    #BookTable.delete()
+    # context = {
+    #     'booking_id': booking_id
+    # }
+    # print(booking_id)
+    # newBooking.objects.all()
+    # newBooking.objects.get(booking_id).delete()
+    # context ={
+    #     'booking_id': booking_id,
+    #     'allBookings': allBookings
+    # }
+    # return render(request, 'book-table.html', context)
+    # return render(request, 'book-table.html', context={'booking_id': booking_id})

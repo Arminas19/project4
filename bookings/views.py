@@ -90,19 +90,19 @@ class BookingTables(CreateView):
         return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'allBookings': allBookings})
 
 
-class cancelle_reservations(DeleteView):
-    template_name = 'cancellations.html'
-    model = newbookTable
+# class cancelle_reservations(DeleteView):
+#     template_name = 'cancellations.html'
+#     model = newbookTable
 
-    def get(self, request, booking_id):
-        BookTable = get_object_or_404(newBooking, booking_id)
-        form = BookTableForm(instance=BookTable)
-        context = {
-        'form': form,
-        'BookTable': BookTable,
-        'booking_id': booking_id
-        }
-        return render(request, 'cancellations.html', context)
+#     def get(self, request, booking_id):
+#         BookTable = get_object_or_404(newBooking, booking_id)
+#         form = BookTableForm(instance=BookTable)
+#         context = {
+#         'form': form,
+#         'BookTable': BookTable,
+#         'booking_id': booking_id
+#         }
+#         return render(request, 'cancellations.html', context)
 
     
 def deleteBooking(request, booking_id):

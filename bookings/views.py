@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView, DeleteView, ListView, CreateView
 from django.core.exceptions import ObjectDoesNotExist
 from django.views import generic, View
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import newbookTable, newBooking, TableInverntory
 from .forms import BookTableForm, BookPeople
 
@@ -106,21 +106,6 @@ class cancelle_reservations(DeleteView):
 
     
 def deleteBooking(request, booking_id):
-    print(booking_id)
-    #BookTable = get_object_or_404(newBooking, id=booking_id)
     newBooking.objects.get(id=booking_id).delete()
-    return redirect('logged-in.html') 
-    # newBooking.objects.get(booking_id).delete()
-    #BookTable.delete()
-    # context = {
-    #     'booking_id': booking_id
-    # }
-    # print(booking_id)
-    # newBooking.objects.all()
-    # newBooking.objects.get(booking_id).delete()
-    # context ={
-    #     'booking_id': booking_id,
-    #     'allBookings': allBookings
-    # }
-    # return render(request, 'book-table.html', context)
-    # return render(request, 'book-table.html', context={'booking_id': booking_id})
+    return redirect(reverse('logged-in'))
+  

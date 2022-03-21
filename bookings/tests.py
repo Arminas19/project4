@@ -1,7 +1,6 @@
 import unittest
 from django.test import TestCase
 #from .bookings.models import newBooking
-# from bookings.models import *
 # from .views import BookingTables, deleteBooking
 
 # to run test type: python3 bookings/tests.py
@@ -35,7 +34,7 @@ class TestBookingTables(unittest.TestCase):
     #     self.assertEqual(already_booked, True)
 
     def test_if_BookingTables_is_checking_for_max_number_of_people(self):
-        """    """
+        """  """
         pass
 
     def test_if_BookingTables_throws_an_errorMessage_when_an_error_occures(self):

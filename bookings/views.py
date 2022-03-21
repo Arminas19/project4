@@ -6,7 +6,6 @@ from django.views import generic, View
 from django.urls import reverse_lazy, reverse
 from .models import newbookTable, newBooking, TableInverntory
 from .forms import BookTableForm, BookPeople
-
 def index(request):
     return render(request, 'index.html', context=None)
 
@@ -94,4 +93,4 @@ class BookingTables(CreateView):
 def deleteBooking(request, booking_id):
     newBooking.objects.get(id=booking_id).delete()
     return redirect(reverse('logged-in'))
-  
+    

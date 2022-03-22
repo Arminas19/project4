@@ -34,8 +34,27 @@ class TestBookingTables(unittest.TestCase):
     #     self.assertEqual(already_booked, True)
 
     def test_if_BookingTables_is_checking_for_max_number_of_people(self):
-        """  """
-        pass
+        """ Here im going to test out the logic of my code in the views.py file.
+            How dose this test work? so we go through the BookingInformation than we
+            select the amount of people that have booked and place that value inside the
+            number_of_booked_people variablem than we compare that variable with the amount of people allowed
+            and we throw an errorMessage if the max number of people has been met.
+        """
+        max_people_allowed = 100
+        number_of_booked_people = 0
+        errorMessage = None
+        BookingInformation = [100, 'BookingNames', 'BookingDates', 'BookingTime']
+        number_of_booked_people += BookingInformation[0]
+
+        try:
+            print(number_of_booked_people)
+            if number_of_booked_people >= max_people_allowed:
+                errorMessage = True
+        except Exception as errorMessage:
+            errorMessage = False
+
+        self.assertEqual(errorMessage, True)
+
 
     def test_if_BookingTables_throws_an_errorMessage_when_an_error_occures(self):
         """ Here im checking if the errorMessage logic is doing what i intend it to do.

@@ -6,22 +6,27 @@ from django.views import generic, View
 from django.urls import reverse_lazy, reverse
 from .models import newbookTable, newBooking, TableInverntory
 from .forms import BookTableForm, BookPeople
+
+
 def index(request):
     return render(request, 'index.html', context=None)
+
 
 def login(request):
     return render(request, 'login.html', context=None)
 
+
 def signUp(request):
     return render(request, 'Sign-up.html', context=None)
+    
     
 def loggedin(request):
     return render(request, 'logged-in.html', context=None)
 
+
 class BookingTables(CreateView):
     template_name = 'book-tables.html'
   
-
     def get(self, request):
         form = BookTableForm()
         form2 = BookPeople()
@@ -73,7 +78,7 @@ class BookingTables(CreateView):
                 Booking = newBooking(first_name=first_name, last_name=last_name, pick_date=pick_date, pick_time=pick_time)
                 booking_id = Booking.id
                 Booking.save()
-                #print(BookingID)
+                # print(BookingID)
                 BookTabless = newbookTable(people=people, Booking=Booking)
                 BookTabless.save()
                 
@@ -85,12 +90,12 @@ class BookingTables(CreateView):
             from2 = BookPeople()
             return render(request, 'book-table.html', context={})
 
-
         return render(request, 'book-table.html', context={'form': form, 'form2': form2, 'Table_booked': Table_booked, 'errorMessage': errorMessage, 'allBookings': allBookings})
 
     # This function get's the id of the booking that was made by the user and deletes it.
     # it's called when the user presses the 'Cancelle Reservation' button.
+    
+    
 def deleteBooking(request, booking_id):
     newBooking.objects.get(id=booking_id).delete()
     return redirect(reverse('logged-in'))
-    

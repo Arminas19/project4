@@ -1,12 +1,13 @@
 import unittest
 from django.test import TestCase
-#from .bookings.models import newBooking
+# from .bookings.models import newBooking
 # from .views import BookingTables, deleteBooking
 
 # to run test type: python3 bookings/tests.py
 # watch python Testing 'Real World Test's' to learn how to test my python code.
 
 # Create your tests here.
+
 
 class TestBookingTables(unittest.TestCase):
     # test_if_BookingTables_is_checking_for_double_bookings dose not work because of an error im my interpreter, 
@@ -55,7 +56,6 @@ class TestBookingTables(unittest.TestCase):
 
         self.assertEqual(errorMessage, True)
 
-
     def test_if_BookingTables_throws_an_errorMessage_when_an_error_occures(self):
         """ Here im checking if the errorMessage logic is doing what i intend it to do.
             Im trying to see if the errorMessage activates and prevents 'a' from changing to a 6,
@@ -95,7 +95,7 @@ class TestBookingTables(unittest.TestCase):
         conditions_met = False
         form_is_valid = True
         
-        if form_is_valid == True:
+        if form_is_valid is True:
             conditions_met = True
             print('conditions_met is True')
         else:
@@ -103,14 +103,14 @@ class TestBookingTables(unittest.TestCase):
 
         No_errors = True
 
-        if No_errors == True:
+        if No_errors is True:
             error = False
             print('No error has occuered')
 
         else:
             error = True
 
-        if error == False and conditions_met == True:
+        if error is False and conditions_met is True:
             print('Table_booked is True')
             Table_booked = True
 

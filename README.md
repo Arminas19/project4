@@ -66,50 +66,59 @@
    + The user can only access this page if they are logged in.
    + The user has to fill in all the required boxes in order to book a table.
    + Once the user submits the form, a success message will appear to note that the booking was successful.  
-![Success-Message](static/assets/success-message.PNG)
+   + The user will be able to cancelle their booking aswel once they have successfully booked a table. 
+![Success-Message/cancelle-booking](static/assets/cancelle-bookings.PNG)
 
 *** 
    ## Testing
-   + I have tested the sign-up form and I have confirmed that the button and link work, you need an email for the email input and all inputs are set to require. 
+   + I have tested the Booking form and I have confirmed that all the button and links work.
    + I have confirmed that all the icons and font work.
    + I have confirmed that all my content is easily readable to the user by showing my website to someone else.
-   + I have confirmed that my video is fully controllable and that it fully works like it's supposed to.
    + I have tested my website in different browser's such as: Microsft Edge, Chrome, Firefox.
+   + i wrote some test's that tests out the logic in my code using Unittest. 
+   ![Test's](static/assets/tests.PNG)
+
    **Bugs** 
 * Solved Bugs
-   + I had an issue with adding the FIFA video to my website, later I found out with some help from code institute's Tutor assistance that it was my link and I didn't embed it before adding it to my code. 
-   + I had an issue with the display: inline; it wouldn't work properly but I figured it out and margined the home content till it was level.
+   + I had an issue with rendering the id of my bookings to the deleteBooking function but later i solved it by using the 'reverse' method. 
+   + I had an issue with writting the logic out and using validations in the views.py file, it took me a long time to figure out that i can write
+   validators in the forms.py file or even in the models file. 
+   + At the start of my project i didnt fully understand the views in the views.py file, example: ListView, DetailView, DeleteView and so on...
+   so i had a huge problem where i couldnt display my booking to the user so that they could delete it (or so i thought). This caused me to watch alot of videos and i wasted alot of time trying to figure out how can i fix my problem but i figured it out eventually.  
    
    **Unfixed Bugs** 
-   + I can't move my iframe video to the left, I tried margin, padding, and floats but the only thing that worked was a one line style but the problem is that I cant use @media on it to set height and width, just couldn't connect my CSS to this element. 
-   + If I had more time I would try and make this website a bit more responsive. 
+   + I can't import my models because i do not have an interpeter selected, i do not want to select it because it might break or undo something so im just leaving it be. 
    ***
 **Validator Testing**
 * HTML
-   + No errors or warnings were found for all pages - index More or sign-up.
+   + i was using this validator to check for errors - https://validator.w3.org/, It had a problem with me using django and a 'fatal' error occured when i used 'html lang="en"'. 
 * CSS 
-   + No errors were found but a warning with the contents of 'Imported style sheets are not checked indirect input and file upload modes' which doesn't relate to my CSS.
+   + No errors were found.
+* JavaScript
+   + No code, No errors.
 * Python
-   + 
+   + I used http://pep8online.com/ to check for erros, No erros occured except for 'line too long' and warnings for whitespace. Validated files: views.py, tests.py file. 
 * Accessibility 
-   + I have checked lighthouse and confirmed that my website is easily accessible to users.
-   ![Lighthouse scores image](assets/css/images/Lighthouse.PNG)
+   + I have checked lighthouse and confirmed that my website is easily accessible to users. score for Accessibility: 94
+![Lighthouse scores image](static/assets/lighthouse.PNG)
 *** 
    ## Development
-* My website was deployed on GitHub pages, they are the steps I took:
-   + In GitHub repository, I navigated to settings. 
-   + I scrolled down to pages, I clicked on the link. 
-   + In the source drop-down menu, I selected my branch as - main, and then I got the link to my website. 
-   * Here is the link to my website - https://arminas19.github.io/Project1/ 
+* My website was deployed on GitHub pages.
+   + https://github.com/Arminas19/project4
+* My webiste was deployed to Heroku.
+   + 
  ### Credits 
+
 **Content** 
    + I got inspiration from code institute's "i think before i blog" section. 
-   + I had looked over Django documentation and stack overflow to check for syntax that I didn't know how to use.
+   + I had looked over Django documentation and stackoverflow to check the syntax that I didn't know how to use.
+   + Got help solving some bugs from tutor's and my mentor.
    
 **Media**
    + I copy and pasted a small fraction of text from Glenroyal restaurant into my Sodja restaurant project.
    + All my images were taken from google images.  
-   + I got my icon image in google.
+   + I got my icon image from google.
+
 ## Resolution Sizes
    + Fully responsive sizes.
 

@@ -106,7 +106,7 @@
 * My website was deployed on GitHub pages.
    + https://github.com/Arminas19/project4
 * My webiste was deployed to Heroku.
-   + 
+   + https://restaurant-project4.herokuapp.com/
  ### Credits 
 
 **Content** 

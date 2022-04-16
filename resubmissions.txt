@@ -1,0 +1,4 @@
+LO6 - 6.2: Got rid of the commented out code from my code base.
+
+LO3 - 3.1: Got rid of the 500 server issue that was happening, also added 'Logged In' to the logged-in navbar so that the user 
+knows when they have logged in.  

@@ -1,7 +1,5 @@
 import unittest
 from django.test import TestCase
-# from .bookings.models import newBooking
-# from .views import BookingTables, deleteBooking
 
 # to run test type: python3 bookings/tests.py
 # watch python Testing 'Real World Test's' to learn how to test my python code.
@@ -10,29 +8,6 @@ from django.test import TestCase
 
 
 class TestBookingTables(unittest.TestCase):
-    # test_if_BookingTables_is_checking_for_double_bookings dose not work because of an error im my interpreter, 
-    # Error Type - ImportError: attempted relative import with no known parent package.
-    # This error happened becuase at the very start of my project i made two interpreters by accident. 
-    # I could select the interpreter i want to use but im afraid of messing things up, so im just going to leave it here. 
-
-    # def test_if_BookingTables_is_checking_for_double_bookings(self):
-    #     """  This test is checking if my double bookings prevension works, so im 
-    #     creating an instance of the booking than im saving it to the database, than im getting
-    #     that instance in the try block, if that instance is their than already_booked should be True.
-    #     if the instance is their the test should pass if not the test should fail.
-    #     """
-    #     already_booked = False
-    #     test_booking = newBooking(first_name='Kev', last_name='guy', pick_date='21/03/2022', pick_time='10:52')
-    #     test_booking.save()
-
-    #     try:
-    #         test_booking = newBooking.objects.get(first_name='kev', last_name='guy', pick_date='21/03/2022', pick_time='10:52')
-    #         print(test_booking)
-    #         already_booked = True
-    #     except ObjectDoesNotExist:
-    #         already_booked = False
-
-    #     self.assertEqual(already_booked, True)
 
     def test_if_BookingTables_is_checking_for_max_number_of_people(self):
         """ Here im going to test out the logic of my code in the views.py file.

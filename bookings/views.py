@@ -20,14 +20,8 @@ def signUp(request):
     return render(request, 'Sign-up.html', context=None)
     
     
-def loggedin(request, Table_booked):
-    Table_booked = False
-    
-    context = {
-        'Table_booked': Table_booked
-    }
-
-    return render(request, 'logged-in.html', context)
+def loggedin(request):
+    return render(request, 'logged-in.html', context=None)
 
 
 class BookingTables(CreateView):
@@ -105,3 +99,11 @@ class BookingTables(CreateView):
 def deleteBooking(request, booking_id):
     newBooking.objects.get(id=booking_id).delete()
     return redirect(reverse('logged-in'))
+
+
+def view_bookings(request):
+    errorMessage = None
+    Table_booked = True
+    allBookings = newBooking.objects.all()
+
+    return render(request, 'view-bookings.html', context={'Table_booked': Table_booked, 'errorMessage': errorMessage, 'allBookings': allBookings})

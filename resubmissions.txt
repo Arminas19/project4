@@ -1,10 +1,34 @@
-LO6 - 6.2: Got rid of the commented out code from my code base.
+LO6 - 6.2: Got rid of the commented out code from my code base, and fixed some links. Finished
 
 LO3 - 3.1: Got rid of the 500 server issue that was happening, also added 'Logged In' to the logged-in navbar so that the user 
-knows when they have logged in.
+knows when they have logged in. Finished
 
-LO1 - 1.6: I placed the User Stories in their proper place.
+LO1 - 1.6: I placed the User Stories in their proper place. Finished
 
-LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to to create sprints. 
+LO1 - 1.9: conditional loops "ARE" implemated already, please go through BookingTables view fully. Finished
+Example of conditional loops: 
 
-LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. 
+        for reservation in already_full:
+            tables = reservation.tables.all()
+            for table in tables:
+                number_of_booked += table.people
+            if number_of_booked >= 100:
+                errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
+        except Exception as err:
+            print(err)    
+
+This code iterates through already_full and tables to check if there is enough tables left for guessed's.
+
+LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to create sprints. Not Finished (need to document this in the read.me file)
+
+LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. Not Finished (need more custom css code)
+
+LO2 - 2.2: Added a link to the 'all Bookings' section so that the user can access their bookings at anytime.  Not Finished
+
+LO1 - 1.1: Not Finished
+
+LO1 - 1.7: Not Finished
+
+LO1 - 1.12: Not Finished
+
+LO6- 6.3: Not Finished

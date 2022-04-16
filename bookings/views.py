@@ -66,8 +66,6 @@ class BookingTables(CreateView):
                         tables = reservation.tables.all()
                         for table in tables:
                             number_of_booked += table.people
-                    # number_of_booked = sum([i.table.people for i in already_full if i.table])
-                    print(number_of_booked)
                     if number_of_booked >= 100:
                         errorMessage = 'Sorry please book a different date, we are already full!, Thank You'
                 except Exception as err:

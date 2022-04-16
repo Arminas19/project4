@@ -6,3 +6,5 @@ knows when they have logged in.
 LO1 - 1.6: I placed the User Stories in their proper place.
 
 LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to to create sprints. 
+
+LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. 

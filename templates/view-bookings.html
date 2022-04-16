@@ -64,14 +64,14 @@
             that the form has been sent successfully.
             -->
             {% if Table_booked == True %}
-            <div class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Well done!</h4>
-                <p>You have successfully booked a table with sodja resturunat. If you need anything else please feel free to contact us at email: Sodja@gmail.com or contact us with mobile@ +353 0894786690.</p>
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Your Bookings:</h4>
+                <p>You can cancell or edit your bookings here..</p>
                 <hr>
-                <p class="mb-0">Be sure to cancelle or rearrange date if you feel like you cannot attended, contact us for more information.</p>
+                <p class="mb-0">If you do not have any bookings, Book Here:<a href="./book-table.html"></a> </p>
               </div>
               <div>
-                  <h2> Your Bookings: </h2>
+
                   <table>
                     
                   {% for booking in allBookings %}
@@ -87,9 +87,10 @@
                      </tr>
                 </table>
                 {% endfor %}
+                {% if allBookings = None %}
+                <p> No Bookings</p>
+                {% endif %}
               </div>
-              {% else %}
-           <p> No Bookings </p>
             {% endif %}
             <hr style="Visibility: hidden;">
         </div>

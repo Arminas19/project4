@@ -32,7 +32,12 @@
                     </li>
                     <li class="nav-item nav-item-header">
                         <a class="nav-link nav-item-header" href="./book-table.html">Book Tables</a>
-                        <a class="nav-link nav-item-header disabled" href="./book-table.html">Book Tables</a>
+                        
+                        {% if Table_booked == True %}
+                        <a class="nav-link nav-item-header" href="./book-table.html">My Tables</a>
+                        {% else %}
+                        <a class="nav-link nav-item-header disabled" href="./book-table.html">My Tables</a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>

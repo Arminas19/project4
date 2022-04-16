@@ -21,7 +21,8 @@ def signUp(request):
     
     
 def loggedin(request, Table_booked):
-
+    Table_booked = False
+    
     context = {
         'Table_booked': Table_booked
     }

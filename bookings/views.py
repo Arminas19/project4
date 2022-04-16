@@ -20,7 +20,12 @@ def signUp(request):
     return render(request, 'Sign-up.html', context=None)
     
     
-def loggedin(request):
+def loggedin(request, Table_booked):
+
+    context = {
+        'Table_booked': Table_booked
+    }
+
     return render(request, 'logged-in.html', context)
 
 

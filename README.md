@@ -18,6 +18,26 @@
    + Sprints using the website "ClickUp"
 
 ![ClickUp](static/assets/sprints1.png)
+## Design process
+
+* Before starting my project I thought about how I am going to structure and design my project. The first step I took was to create a diagram on my notes book (a basic sketch of what the website would look like) and I wrote some notes down on what I needed to add to my project so that I won't forget later. After I implemented a basic diagram sketch of my website I began creating a more detailed wireframe on the "InVision" website. Then I turned my basic notes into User stories and then created milestones and iterations with them.  
+
+![ClickUp](static/assets/wireframes.png)
+   + Wireframes
+
+![ClickUp](static/assets/editTable.png)
+   + Edit Table Wireframe
+
+![ClickUp](static/assets/BookTables.png)
+   + Book Table Wireframe
+
+![ClickUp](static/assets/Base.html.png)
+   + Home Page Wireframe
+
+![ClickUp](static/assets/authontication_bookings.png)
+   + Wireframes
+
+*** 
 
 ## Features of my Home Page
 

@@ -5,6 +5,8 @@ knows when they have logged in. Finished
 
 LO1 - 1.6: I placed the User Stories in their proper place. Finished
 
+LO6- 6.3: Added Deployment section to my read.me file. Finished
+
 LO1 - 1.9: conditional loops "ARE" implemated already, please go through BookingTables view fully. Finished
 Example of conditional loops: 
 
@@ -19,7 +21,7 @@ Example of conditional loops:
 
 This code iterates through already_full and tables to check if there is enough tables left for guessed's.
 
-LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to create sprints. Not Finished (need to document this in the read.me file)
+LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to create sprints. Added this to the read.me file in the preparation section . Finished
 
 LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. Not Finished (need more custom css code)
 
@@ -29,6 +31,4 @@ LO1 - 1.1: Not Finished
 
 LO1 - 1.7: Not Finished
 
-LO1 - 1.12: Not Finished
-
-LO6- 6.3: Not Finished
+LO1 - 1.12: Not Finished (preparation section)

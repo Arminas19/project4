@@ -7,8 +7,17 @@
 ![Home Page](static/assets/home-page.PNG)
    + This is my home page, the first thing you will see when you load up my website.
 
+## Preparation
 
+* I have created User stories so that I could set specific goals for myself. I created some milestones so that I can better organize my time and focus my effort on a specific objective that I set for myself. I created sprints using the website 'ClickUp' so that I can easily check my progress on a specific user story. 
 
+* Things that i did
+   + User Stories
+   + labels for those User Stories (To Better organize my priorities)
+   + Milestones "iterations"
+   + Sprints using the website "ClickUp"
+
+![ClickUp](static/assets/sprints1.png)
 
 ## Features of my Home Page
 
@@ -107,8 +116,18 @@
    + https://github.com/Arminas19/project4
 * My webiste was deployed to Heroku.
    + https://restaurant-project4.herokuapp.com/
- ### Credits 
 
+## Deployment
+* First step i took for deployment was to turn DEBUG = True to DEBUG = False.
+   + This step ensures me that the debug tool is off so that no sensitive information gets leaked.
+* I also added "ACCOUNT_EMAIL_VERIFICATION = 'none'" into my settings.py.
+   + I added this code in because when i didnt have this i was thrown a 500 server error in Heroku.
+* I also change some config vars in the Heroku app in the settings section.
+   + I deleted DISABLE_COLLECTSTATIC from the heroku config vars.
+* I added X_FRAME_OPTIONS = 'SAMEORIGIN' 
+   + I had to add X_FRAME_OPTIONS because without that the summernote extension will not work on the deployed heroku app.
+
+### Credits 
 **Content** 
    + I got inspiration from code institute's "i think before i blog" section. 
    + I had looked over Django documentation and stackoverflow to check the syntax that I didn't know how to use.

@@ -22,6 +22,8 @@
 
 * Before starting my project I thought about how I am going to structure and design my project. The first step I took was to create a diagram on my notes book (a basic sketch of what the website would look like) and I wrote some notes down on what I needed to add to my project so that I won't forget later. After I implemented a basic diagram sketch of my website I began creating a more detailed wireframe on the "InVision" website. Then I turned my basic notes into User stories and then created milestones and iterations with them.  
 
+* I chose this color pattern of black and white with some red attributes because it's simplistic and easy to distinguish between the different sections and content using they's three colors. I also made sure the headings are in respectable sizes, comparing the sizes between the content and the headers. I tried to make it as easy as possible to read the content and headers to the user whilst keeping the theme.  
+
 ![ClickUp](static/assets/wireframes.png)
    + Wireframes
 

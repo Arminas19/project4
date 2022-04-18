@@ -33,3 +33,13 @@ LO1 - 1.1: Not Finished
 
 LO1 - 1.7: Not Finished
 
+Deploy to heroku -
+
+heroku login -i
+
+email: armeska14@gmail.com
+pass: @Nitro50
+
+heroku git:remote -a your_app_name_here
+
+git push heroku main

@@ -13,3 +13,7 @@ body{
 #resturanunt-image{
 width: 90%;
 }
+
+.red-text {
+    color: rgb(173, 11, 11);
+}

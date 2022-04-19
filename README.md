@@ -122,7 +122,7 @@
    ***
 **Validator Testing**
 * HTML
-   + i was using this validator to check for errors - https://validator.w3.org/, It had a problem with me using django and a 'fatal' error occured when i used 'html lang="en"'. 
+   + i was using this validator to check for errors - https://validator.w3.org/, The validator didnt recognise Django But all my other html elements were free of errors. 
 * CSS 
    + No errors were found.
 * JavaScript

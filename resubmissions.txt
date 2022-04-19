@@ -40,6 +40,6 @@ heroku login -i
 email: armeska14@gmail.com
 pass: @Nitro50
 
-heroku git:remote -a your_app_name_here
+heroku git:remote -a restaurant-project4
 
 git push heroku main

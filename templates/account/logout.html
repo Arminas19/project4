@@ -8,6 +8,30 @@
 <!-- I followed code institute's video guide on customizing my logout.html page. 
 This page consists of having a simple <h1> element and a Sign-out button.
 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top opacity-75">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="./logged-in.html">Logged In Sodja Resturaunt
+            <img src="{% static 'assets/icon.png' %}" alt="" width="50" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                <li class="nav-item nav-item-header">
+                    <a class="nav-link nav-link-header" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                <li class="nav-item nav-item-header">
+                    <a class="nav-link nav-item-header" href="./book-table.html">Book Tables</a>
+                </li>
+                <li>
+                    <a class="nav-link nav-item-header" href="./view-bookings.html">My bookings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div style="background-color: white;">
 <div class="container">
     <div class="row">

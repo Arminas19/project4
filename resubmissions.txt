@@ -25,7 +25,7 @@ LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https:/
 
 LO1 - 1.12: added a Design process section to the read.me file Finished
 
-LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. Not Finished (need more custom css code)
+LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. Finished
 
 LO2 - 2.2: Added a link to the 'all Bookings' section so that the user can access their bookings at anytime.  Not Finished
 
@@ -43,3 +43,7 @@ pass: @Nitro50
 heroku git:remote -a restaurant-project4
 
 git push heroku main
+
+
+Dont Forget:
+delete the Arminas Guy Booking with Example Booking.

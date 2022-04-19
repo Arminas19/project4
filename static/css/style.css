@@ -21,3 +21,11 @@ width: 90%;
 .no-underline {
     text-decoration: none;
 }
+
+.text-black{
+    color: black;
+}
+
+.text-white{
+    color: white;
+}

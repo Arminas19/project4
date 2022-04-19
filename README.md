@@ -130,7 +130,7 @@
 * Python
    + I used http://pep8online.com/ to check for erros, No erros occured except for 'line too long' and warnings for whitespace. Validated files: views.py, tests.py file. 
 * Accessibility 
-   + I have checked lighthouse and confirmed that my website is easily accessible to users. score for Accessibility: 94
+   + I have checked lighthouse and confirmed that my website is easily accessible to users. score for Accessibility: 97
 ![Lighthouse scores image](static/assets/lighthouse.PNG)
 *** 
    ## Development

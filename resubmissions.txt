@@ -27,7 +27,7 @@ LO1 - 1.12: added a Design process section to the read.me file Finished
 
 LO1 - 1.2: Fixed issues with responsiveness for the images in the Home page. Finished
 
-LO2 - 2.2: Added a link to the 'all Bookings' section so that the user can access their bookings at anytime.  Not Finished
+LO2 - 2.2: Added a link to the 'all Bookings' section so that the user can access their bookings at anytime, added edit functionality. Finished
 
 LO1 - 1.1: Not Finished
 

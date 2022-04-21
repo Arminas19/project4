@@ -95,12 +95,25 @@ class BookingTables(CreateView):
 
 
 def edit_bookings(request, booking_id):
-    booking = newBooking.objects.get(id=booking_id)
-    form = BookTableForm(instance=booking)
+
+    if request == 'POST':
+        booking = newBooking.objects.get(id=booking_id)
+        form = BookTableForm(instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('view-bookings.html'))
+        else:
+            errorMessage = 'Error in the Booking'
+    else:
+        form = BookTableForm(instance=booking)
+
+    template = 'edit-booking.html'
     context = {
-        'form': form
+        'form': form,
+        'errorMessage': errorMessage
     }
-    return render(request, 'edit-booking.html', context)
+    
+    return render(request, template, context)
     
 
 def deleteBooking(request, booking_id):

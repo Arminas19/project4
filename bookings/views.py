@@ -105,6 +105,7 @@ def edit_bookings(request, booking_id):
         else:
             errorMessage = 'Error in the Booking'
     else:
+        booking = newBooking.objects.get(id=booking_id)
         form = BookTableForm(instance=booking)
 
     template = 'edit-booking.html'
@@ -112,7 +113,7 @@ def edit_bookings(request, booking_id):
         'form': form,
         'errorMessage': errorMessage
     }
-    
+
     return render(request, template, context)
     
 

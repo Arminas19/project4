@@ -95,19 +95,11 @@
                     {{ form.pick_time }}
                     {% csrf_token %}
                 </div>
-                <div class="col-12 mt-5">
-                    <label for="" class="mb-3" style="font-weight: bold;">How many people are attending?</label>
-                    {{ form2.people }}
-                    {% csrf_token %}
-                    <p class="mt-3"> <strong>Note:</strong> keep the people between 1-20 or else you will have to restart your form. (max 20 people) </p>
-                    <p class="mt-3">Only 5 people per table is allowed, if you are coming with
-                        more than 5 people please note that you will be setted in different tables. </p>
-                </div>
                 <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary mb-3">Submit Form</button>
+                    <button type="submit" class="btn btn-primary mb-3">Update Form</button>
                 </div>
             </form>
-            
+
             <hr style="Visibility: hidden;">
         </div>
         <!-- They's hr elements are to make space between the content and the footer. -->

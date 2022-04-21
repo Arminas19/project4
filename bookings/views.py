@@ -96,9 +96,12 @@ class BookingTables(CreateView):
 
 def edit_bookings(request, booking_id):
     booking = newBooking.objects.get(id=booking_id)
+    booking2 = newbookTable.objects.get(id=booking_id)
     form = BookTableForm(instance=booking)
+    form2 = BookPeople(instance=booking2)
     context = {
-        'form': form
+        'form': form,
+        'form2': form2
     }
     return render(request, 'edit-booking.html', context)
     

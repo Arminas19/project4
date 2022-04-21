@@ -108,6 +108,7 @@ def edit_bookings(request, booking_id):
         else:
             errorMessage = 'Error in the Booking'
     else:
+        print('new instance')
         booking = newBooking.objects.get(id=booking_id)
         form = BookTableForm(instance=booking)
 

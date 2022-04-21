@@ -102,6 +102,7 @@ def edit_bookings(request, booking_id):
         booking = newBooking.objects.get(id=booking_id)
         form = BookTableForm(instance=booking)
         if form.is_valid():
+            print('saving form')
             form.save()
             return redirect(reverse('view_bookings', args=[booking.id]))
         else:

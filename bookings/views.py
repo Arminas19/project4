@@ -95,7 +95,7 @@ class BookingTables(CreateView):
 
 
 def edit_bookings(request, booking_id):
-
+    errorMessage = None
     if request == 'POST':
         booking = newBooking.objects.get(id=booking_id)
         form = BookTableForm(instance=booking)

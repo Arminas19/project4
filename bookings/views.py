@@ -103,7 +103,7 @@ def edit_bookings(request, booking_id):
         form = BookTableForm(instance=booking)
         if form.is_valid():
             form.save()
-            return redirect(reverse('view_bookings.html'))
+            return redirect(reverse('edit_booking'))
         else:
             errorMessage = 'Error in the Booking'
     else:

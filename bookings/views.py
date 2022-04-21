@@ -116,7 +116,7 @@ def edit_bookings(request, booking_id):
         'errorMessage': errorMessage
     }
 
-    return render(request, 'logged-in.html', context)
+    return render(request, template, context)
     
 
 def deleteBooking(request, booking_id):

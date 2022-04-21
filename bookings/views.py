@@ -99,8 +99,10 @@ def edit_bookings(request, booking_id):
     """ This view edit's the booking selected by the user."""
     errorMessage = None
     if request == 'POST':
+        print('POST')
         booking = newBooking.objects.get(id=booking_id)
-        form = BookTableForm(instance=booking)
+        form = BookTableForm(request.POST)
+        print('validating form')
         if form.is_valid():
             print('saving form')
             form.save()

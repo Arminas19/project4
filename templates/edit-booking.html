@@ -31,7 +31,7 @@
     <!-- This is my main nav bar, it has a logout link and it has a Book-Tables link that is active once the user enters this page. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark opacity-75">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h1" href="./logged-in.html">Sodja Resturaunt
+            <a class="navbar-brand mb-0 h1" href="/logged-in.html">Sodja Resturaunt
                 <img src="{% static 'assets/icon.png' %}" alt="icon" width="64" height="64">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -43,6 +43,10 @@
                     <li class="nav-item nav-item-header">
                         <a class="nav-link nav-link-header" aria-current="page"
                             href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    <li class="nav-item nav-item-header">
+                        <a class="nav-link nav-link-header" aria-current="page"
+                            href="/logged-in.html">Back</a>
                     </li>
                 </ul>
             </div>
@@ -60,12 +64,12 @@
 
             <form class="row g-3" method="POST">
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label" style="font-weight: bold;">First Name</label>
+                    <label for="inputEmail4" class="form-label" style="font-weight: bold;">Update First Name</label>
                     {{ form.first_name }}
                     {% csrf_token %}
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label" style="font-weight: bold;">Last name</label>
+                    <label for="inputPassword4" class="form-label" style="font-weight: bold;"> Update Last name</label>
                    
                     {{ form.last_name }}
                     {% csrf_token %}
@@ -78,13 +82,13 @@
                     {% endif %}
 
                 <div class="col-md-6 mt-5">
-                    <label for="inputCity" class="form-label" style="font-weight: bold;">Pick Date</label>
+                    <label for="inputCity" class="form-label" style="font-weight: bold;">Update Date</label>
                     
                     {{ form.pick_date }}
                     {% csrf_token %}
                 </div>
                 <div class="col-md-6 mt-5">
-                    <label for="inputCity" class="form-label" style="font-weight: bold;">Pick Time</label>
+                    <label for="inputCity" class="form-label" style="font-weight: bold;">Update Time</label>
                    
                     {{ form.pick_time }}
                     {% csrf_token %}

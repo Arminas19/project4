@@ -77,12 +77,15 @@
                     <tr>
                         <td>
                         <p> {{ booking }}</p>
+                       
                         <a href="/delete/{{ booking.id }}">
                         <button type="button" class="btn btn-danger"> Cancelle Reservation </button>
                         </a>
+                        
                         <a href="/edit-booking/{{ booking.id }}">
                             <button type="button" class="btn btn-info"> Edit Reservation </button>
                         </a>
+                    
                          <hr style="Visibility: hidden;">
                         </td>
                      </tr>

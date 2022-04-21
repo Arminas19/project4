@@ -98,15 +98,15 @@ class BookingTables(CreateView):
 def edit_bookings(request, booking_id):
     """ This view edit's the booking selected by the user."""
     errorMessage = None
-    if request == 'POST':
+    if request.method == 'POST':
         print('POST')
         booking = newBooking.objects.get(id=booking_id)
-        form = BookTableForm(request.POST)
+        form = BookTableForm(request.POST, instance=booking)
         print('validating form')
         if form.is_valid():
             print('saving form')
             form.save()
-            return redirect(reverse('view_bookings', args=[booking.id]))
+            return redirect(reverse('view_bookings'))
         else:
             errorMessage = 'Error in the Booking'
     else:

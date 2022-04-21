@@ -92,8 +92,17 @@ class BookingTables(CreateView):
 
     # This function get's the id of the booking that was made by the user and deletes it.
     # it's called when the user presses the 'Cancelle Reservation' button.
+
+
+def edit_bookings(request, booking_id):
+    booking = newBooking.objects.get(id=booking_id)
+    form = BookTableForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'edit-booking.html', context)
     
-    
+
 def deleteBooking(request, booking_id):
     newBooking.objects.get(id=booking_id).delete()
     return redirect(reverse('logged-in'))

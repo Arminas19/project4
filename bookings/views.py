@@ -25,6 +25,7 @@ def loggedin(request):
 
 
 class BookingTables(CreateView):
+    """ This view validates and creates bookings. """
     template_name = 'book-tables.html'
   
     def get(self, request):
@@ -95,6 +96,7 @@ class BookingTables(CreateView):
 
 
 def edit_bookings(request, booking_id):
+    """ This view edit's the booking selected by the user."""
     errorMessage = None
     if request == 'POST':
         booking = newBooking.objects.get(id=booking_id)
@@ -118,11 +120,13 @@ def edit_bookings(request, booking_id):
     
 
 def deleteBooking(request, booking_id):
+    """ This view deletes the booking that has been selected by the user."""
     newBooking.objects.get(id=booking_id).delete()
     return redirect(reverse('logged-in'))
 
 
 def view_bookings(request):
+    """ This view Display's all the bookings. """
     errorMessage = None
     Table_booked = True
     allBookings = newBooking.objects.all()

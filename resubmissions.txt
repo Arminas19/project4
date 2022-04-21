@@ -47,3 +47,7 @@ git push heroku main
 
 Dont Forget:
 delete the Arminas Guy Booking with Example Booking.
+
+admin info:
+username: admin
+pass: admin

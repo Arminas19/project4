@@ -130,7 +130,17 @@
 * Python
    + I used http://pep8online.com/ to check for erros, No erros occured except for 'line too long' and warnings for whitespace. Validated files: views.py, tests.py file. 
 * Accessibility 
-   + I have checked lighthouse and confirmed that my website is easily accessible to users. score for Accessibility: 97
+   + I have checked lighthouse and confirmed that my base.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my login.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my signup.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my logout.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my logged-in.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my view-bookings.html page is easily accessible to users. score for Accessibility: 96.
+   + I have checked lighthouse and confirmed that my edit-bookings.html page is easily accessible to users. score for Accessibility: 97.
+   + I have checked lighthouse and confirmed that my book-table.html page is easily accessible to users. score for Accessibility: 97.
+
+
+
 ![Lighthouse scores image](static/assets/lighthouse.png)
 *** 
    ## Development

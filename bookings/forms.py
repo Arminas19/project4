@@ -18,13 +18,11 @@ class BookTableForm(ModelForm):
            'pick_date': forms.DateInput(
                 format=('%d/%m/%Y'),
                 attrs={'class': 'form-control', 
-                       'placeholder': 'Select a date',
-                       'type': 'date' 
+                       'type': 'date'
                       }),
             'pick_time': forms.TimeInput(
                 format=('%H:%M'),
                 attrs={'class': 'form-control',
-                'placeholder': 'Select a Time',
                 'type' : 'time'
                 }),
         }

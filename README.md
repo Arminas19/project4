@@ -130,9 +130,9 @@
    + logout.html passed with no errors.
    + logged-in.html passed with no errors.
    + login.html passed with no errors.
-   + view-bookings.html Errors Found.
-   + book-table.html Errors Found.
-   + edit-booking.html Errors Found.
+   + book-table.html passed with no errors.
+   + view-bookings.html passed with no errors.
+   + edit-booking.html 1 Error found. Error =  "Bad value 'date picked by user here' for attribute value on element input: The literal did not satisfy the date format".
 * CSS 
    + No errors were found.
 * JavaScript
@@ -182,4 +182,7 @@
 
 ## Resolution Sizes
    + Fully responsive sizes.
+
+* Note: 
+   + All my commit's to github that are labelled 'test' were used to test my website in the heroku app.
 

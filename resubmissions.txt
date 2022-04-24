@@ -7,7 +7,7 @@ LO1 - 1.6: I placed the User Stories in their proper place. Finished
 
 LO6- 6.3: Added Deployment section to my read.me file. Finished
 
-LO1 - 1.9: conditional loops "ARE" implemated already, please go through BookingTables view fully. Not Finished
+LO1 - 1.9: Finished
 Example of conditional loops: 
 
         for reservation in already_full:
@@ -20,6 +20,7 @@ Example of conditional loops:
             print(err)    
 
 This code iterates through already_full and tables to check if there is enough tables left for guessed's.
+You can find this code in bookings/views.py at the BookingTables class.
 
 LO1 - 1.5: Created milestones, added labels to all my user Stories, Used https://clickup.com/ to create sprints. Added this to the read.me file in the preparation section . Finished
 
@@ -32,19 +33,15 @@ LO2 - 2.2: Added a link to the 'all Bookings' section so that the user can acces
 LO1 - 1.1: Added an Accessibility section to my read.me file and checked all web-pages for accessibility results and 
            fixed somee issues with accessibility in every page. Finished
 
-LO1 - 1.7: Not Finished
+LO1 - 1.7: Validated all my pages. Finished
 
 Deploy to heroku -
 
 heroku login -i
 
-email: armeska14@gmail.com
-pass: @Nitro50
-
 heroku git:remote -a restaurant-project4
 
 git push heroku main
-
 
 Dont Forget:
 delete the Arminas Guy Booking with Example Booking.

@@ -122,7 +122,17 @@
    ***
 **Validator Testing**
 * HTML
-   + i was using this validator to check for errors - https://validator.w3.org/, The validator didnt recognise Django But all my other html elements were free of errors. 
+   + I was using this validator to check for errors - https://validator.w3.org/.
+   + To Check my html code i used "view page source" to get my html code without jinja and then copyed that code into the html validator. 
+   
+   + base.html passed with no errors. 
+   + signup.html passed with no errors.
+   + logout.html passed with no errors.
+   + logged-in.html passed with no errors.
+   + login.html Errors Found.
+   + view-bookings.html Errors Found.
+   + book-table.html Errors Found.
+   + edit-booking.html Errors Found.
 * CSS 
    + No errors were found.
 * JavaScript
